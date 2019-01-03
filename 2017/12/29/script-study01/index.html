@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="clouser(클로저)
+12345678910function outerFunc() &amp;#123;   var name = &#39;SIM&#39;;      return function()&amp;#123;       console.log(&#39;My name is &#39;+name);   &amp;#125;&amp;#">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="shs400">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="javascript - clouser(클로저)">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Roy">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="">
+    
+
+    <!-- Title -->
+    
+    <title>javascript - clouser(클로저) - Roy</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!--Favicon-->
+    
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Roy</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://twitter.com/shs4005" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/shs400" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+            
+            
+            
+            
+                <li><a href="https://www.instagram.com/shs400/" class="instagram" target="_blank" data-title="Instagram"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2014 magnetic.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('http://placehold.it/1300x500');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/2018/01/02/script-study02/" class="previous" data-title="javascript - this 바인딩"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a class="next disabled"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">javascript - clouser(클로저)</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <p>clouser(클로저)<br><!-- excerpt --></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outerFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> name = <span class="string">'SIM'</span>;</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+name);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myName = outerFunc();</span><br><span class="line">myName(); <span class="comment">// My name is SIM</span></span><br></pre></td></tr></table></figure>
+<p>outerFunc 함수는 함수 내부에 name 지역 변수를 가지고 있고,<br>return 값으로 익명함수(inner함수라고 생각하자)를 가지고 있다.</p>
+<p>아래에서 선언해준 myName 변수에 outerFunc()를 저장한다는 것은<br>myName은 outerFunc 함수의 return 값인 익명함수를 저장한다는 것이다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+name);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>myName 에는 함수가 담겨있으므로 실행이 가능하고<br>myName()을 호출하면 ‘My name is SIM’ 라는 문자열이 console.log로 인해 출력된다.</p>
+<p>여기서 이상한점은 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">myName(); <span class="comment">// My name is SIM</span></span><br></pre></td></tr></table></figure>
+<p>이부분에서 myName을 호출할때 익명함수 안의<br>console.log(‘My name is ‘+name) 의 name은 어디에도 존재하지 않는다.<br>그렇다면 당연히 not defined 에러가 나야하지만<br>실행해보면<br>‘My name is SIM’ 을 출력할 것이다.<br>이것이 Clouser(클로저)이다.</p>
+<p>외부함수안의 내부함수를 호출할 때 이미 종료된 외부함수의 환경을 기억하여 사용한다.<br>즉, outerFunc 함수안의 내부함수(위의 예시의 익명함수)를 호출할 때<br>이미 호출되고 종료되어 접근 할 수 없는 outerFunc 함수의 환경을 기억해<br>name 값을 사용하는 것이다.</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/javascript/">javascript</a> <a href="/tags/blog/">blog</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr>
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'shs400';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>
