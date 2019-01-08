@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="google-site-verification" content="0csUmrnWzGjJHxGLCbpLsyMt0DB_sEo8fMmISVKEzlc">
+    <!--Description-->
+    
+        <meta name="description" content="WebGL 기초( 4 - Shader 이해 &amp;amp; 색상 채우기 )이번에는 Shader에서 알아보고삼각형에 색상을 그라이데이션으로 넣어보는 작업을 하도록 하겠습니다.
+Shader의 이해GPU는 아래와 같이 2가지 일을 합니다. 
+
+원본의 정점을 클립공간 정점으로 처리">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="shs400">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="WebGL 기초( 4 - Shader 이해 &amp; 색상 채우기 )">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Roy Blog">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="">
+    
+
+    <!--autoCanonical-->
+    <link rel="canonical" href="http://shs400.github.io/2018/10/31/webgl-4/">
+
+    <!-- Title -->
+    
+    <title>WebGL 기초( 4 - Shader 이해 &amp; 색상 채우기 ) - Roy Blog</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-131731182-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/img/roy_favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/roy_favicon.ico" type="image/x-icon">
+    
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Roy Blog</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/tags">tags</a>
+            </li>
+            
+            <li>
+                <a href="/about">about</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://twitter.com/shs4005" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/shs400" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+            
+            
+            
+                <li><a href="atom.xml" class="rss" target="_blank" data-title="RSS"></a></li>
+            
+            
+                <li><a href="https://www.instagram.com/shs400" class="instagram" target="_blank" data-title="Instagram"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2019 hsSIM.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/default_detail_cover_02.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a class="previous disabled"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2018/08/08/WebGL-3/" class="next" data-title="WebGL 기초( 3 - 삼각형..."></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">WebGL 기초( 4 - Shader 이해 & 색상 채우기 )</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <!-- excerpt -->
+<h1 id="WebGL-기초-4-Shader-이해-amp-색상-채우기"><a href="#WebGL-기초-4-Shader-이해-amp-색상-채우기" class="headerlink" title="WebGL 기초( 4 - Shader 이해 &amp; 색상 채우기 )"></a>WebGL 기초( 4 - Shader 이해 &amp; 색상 채우기 )</h1><p>이번에는 Shader에서 알아보고<br>삼각형에 색상을 그라이데이션으로 넣어보는 작업을 하도록 하겠습니다.</p>
+<h3 id="Shader의-이해"><a href="#Shader의-이해" class="headerlink" title="Shader의 이해"></a>Shader의 이해</h3><p>GPU는 아래와 같이 2가지 일을 합니다. </p>
+<ol>
+<li>원본의 정점을 클립공간 정점으로 처리</li>
+<li>클립공간을 pixel로 처리</li>
+</ol>
+<p>vertexShader 셰이더와 fragmentShader는 GPU가 이러한 일들을 할 수 있도록<br>명령과 계산된 데이터를 전달하는 기능을 수행합니다. </p>
+<p>먼저 vertex-Shader와 fragment-Shader를 작성해줍니다.<br>(* vertex-Shader : 정점, fragment-Shader : 색상 )</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 버텍스 셰이더 작성 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"shader-vs"</span> <span class="attr">type</span>=<span class="string">"x-shader/x-vertex"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  attribute vec4 aVertexPosition;  </span></span><br><span class="line"><span class="undefined">  uniform mat4 u_matrix;</span></span><br><span class="line"><span class="undefined">  </span></span><br><span class="line"><span class="undefined">  void main(void) &#123;</span></span><br><span class="line"><span class="undefined">    gl_Position = u_matrix * aVertexPosition;</span></span><br><span class="line"><span class="undefined">    // 클립공간은 -1.0 ~ 1.0의 범위 인데 </span></span><br><span class="line"><span class="undefined">    // gl_Position * 0.5 + 0.5 하여 0.0 ~ 1.0 으로 변경하였다.</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> primitiveType = gl.TRIANGLES;</span><br><span class="line"><span class="keyword">var</span> offset = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> count = <span class="number">9</span>;</span><br><span class="line">gl.drawArrays(primitiveType, offset, count);</span><br></pre></td></tr></table></figure>
+<p><img src="/images/vertex-shader-anim.gif" alt="버텍스셰이"><br>출처 : webglfundamentals.org</p>
+<p>위의 이미지와 같이 원본 정점 9개를 작성한 vertexShader 함수를 통하여<br>GLSL에서 정의된 변수인 gl_Position에 주면 클립공간 정점으로 GPU에 저장합니다.</p>
+<p>gl.drawArrays() 함수를 호출할 떄 primitiveType을 TRIANGLES로 지정하였기 때문에<br>3개의 클립공간의 정점이 생성될 때마다 GPU는 이를 이용해 삼각형을 그리게 됩니다.</p>
+<p>이 삼각형을 그릴때 아래의 그림과 같이 3개의 정점을 기준으로 래스터화 합니다.</p>
+<ul>
+<li>래스터화 = ‘삼각형을 픽셀로 그림’<br>Ex) <img src="/images/webgl4/webgl4_1.png" alt="정점삼각형"> &gt;&gt; <img src="/images/webgl4/webgl4_2.png" alt="삼각형래스터화"></li>
+</ul>
+<p>래스터화를 할 때 삼각형을 구성하는 각각의 픽셀에 대해서 프래그먼트 셰이더를 호출하게 되는데<br>이때 프래그먼트 셰이더는 특수변수인 gl_FragColor를 통해 각 픽셀의 색상을 알려주게 됩니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 프래그먼트 셰이더 작성 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"shader-fs"</span> <span class="attr">type</span>=<span class="string">"x-shader/x-fragment"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  precision mediump float; <span class="comment">// 실수 정확도</span></span></span><br><span class="line"><span class="javascript">  <span class="comment">// 낮은 정도의 precision을 가질수록 빠른 렌더 속도를 가지지만 렌더 퀄리가 그만큼 떨어진다.</span></span></span><br><span class="line"><span class="undefined">  varying vec4 v_color;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">void</span> main(<span class="keyword">void</span>) &#123;</span></span><br><span class="line"><span class="javascript">    gl_FragColor = vec4(<span class="number">0.5</span>, <span class="number">1.0</span>, <span class="number">0.5</span>, <span class="number">1.0</span>); <span class="comment">// vec4(R,G,B,A)</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">// GLSL의 색상값은 0~1 의 값으로 나타낸다.</span></span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<iframe scrolling="no" width="100%" height="400" src="//jsfiddle.net/7osmx9rz/embedded/result/dark" frameborder="0" allowfullscreen></iframe>
+<p>이를 응용하면 아래와 같이 응용할 수 있습니다.</p>
+<p>참고)<br>varing은 vertexShader에서 만든 데이터를 에서 fragmentShader에게 전달하는데 사용됩니다.<br>(* varing의 타입과 이름이 동일해야 연결이 됩니다.)</p>
+<ol>
+<li>프래그먼트 셰이더는 래스터화된 점, 선, 면 등을 구성하는 픽셀 수 만큼 호출된다.</li>
+<li>버텍스 셰이더에서 설정한 배어링 값은 선의 경우 2점 보간, 삼각형의 경우 3점 보간을 해서<br>프래그먼트 셰이더에게 전달된다(배어링은 보간되어 전달된다는 점이 중요합니다).</li>
+</ol>
+<iframe scrolling="no" width="100%" height="400" src="//jsfiddle.net/oct0k29f/embedded/result/dark" frameborder="0" allowfullscreen></iframe>
+<p>아래의 그림을 통하여 정점 3개의 삼각형의 v_color가 보간되어 레스터화 되는 동작을 확인할 수 있습니다.</p>
+<iframe src="https://webglfundamentals.org/webgl/lessons/resources/fragment-shader-anim.html" width="400px" height="300px" frameborder="0" allowfullscreen></iframe>
+<p>출처 : [webglfundamentals.org]</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/javascript/">javascript</a> <a href="/tags/blog/">blog</a> <a href="/tags/webgl/">webgl</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr>
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'shs400';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>
