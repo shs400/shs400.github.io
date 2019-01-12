@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shs400.github.io/"/>
-  <updated>2019-01-10T01:16:47.512Z</updated>
+  <updated>2019-01-12T01:41:22.908Z</updated>
   <id>http://shs400.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WebGL-7</title>
+    <link href="http://shs400.github.io/2018/12/24/WebGL-7/"/>
+    <id>http://shs400.github.io/2018/12/24/WebGL-7/</id>
+    <published>2018-12-24T00:17:36.000Z</published>
+    <updated>2019-01-12T01:41:22.908Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --><h1 id="WebGL-7-View"><a href="#WebGL-7-View" class="headerlink" title="WebGL ( 7 - View )"></a>WebGL ( 7 - View )</h1><p>이번장은 3D 도형을 구현하기전에 View 관점에 대해 설명하려고 합니다.<br>앞의 6장의 행렬과 관련된 내용입니다.</p><h2 id="모델-뷰-프로젝션-Matrix-MVP"><a href="#모델-뷰-프로젝션-Matrix-MVP" class="headerlink" title="모델, 뷰, 프로젝션 Matrix ( MVP )"></a>모델, 뷰, 프로젝션 Matrix ( MVP )</h2><p>먼저 랜더링 간단한 랜더링 파이프라인은 이렇습니다.</p><p><img src="/images/webgl6/matrix08.jpg" alt="matrix"></p><p>월드 -&gt; 카메라 -&gt; 투영행렬을 거쳐 3차원이 2차원으로 변환되는 과정입니다.<br>투영행렬이 끝난뒤에 클리핑과 뷰포트 변환이 있지만 여기서는 위와같이 투영 행렬까지만 설명합니다.</p><p><img src="/images/webgl6/matrix09.jpg" alt="matrix"></p><p><code>모델 Matrix</code>는 모델좌표계에서 월드 좌표계로 변환해주는 행렬입니다.<br>( 6장에서 배운 translate, scale, rotate 변환이 모델 Matrix 입니다. )</p><p><img src="/images/webgl6/matrix10.jpg" alt="matrix 변환"></p><p>다음으로 월드 좌표계에서 카메라 좌표계로 변환해줘야 하는데<br>이때 <code>뷰 Matrix</code>를 사용합니다.<br>( 이 과정에서 카메라의 이동이라던지 카메라 위치 설정등이 이루어지고 lookAt 함수를 사용하게 됩니다. )</p><p><img src="/images/webgl6/matrix11.jpg" alt="matrix 변환"></p><p>마지막으로 투영 변환 ( Projection Matrix )</p><p>월드 좌표계와 카메라 좌표계는 모두 3차원 좌표계입니다.<br>그러나 우리가 디스플레이로 확인하게 되는 랜더링 결과들은 모두 2차원의 화면입니다.<br>때문에 3차원 좌표계를 2차원 좌표계로 바꾸는 변환이 필요하다는 것을 알 수 있는데,<br>이때 <code>투영 변환</code>이 필요합니다.</p><p>투영 변환에는 perspective와 Orthographic가 있는데<br>우리는 perspective를 사용하도록 하겠습니다.</p><h3 id="perspective"><a href="#perspective" class="headerlink" title="perspective"></a>perspective</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Ex)</span><br><span class="line">mat4.perspective(view, canvas.width / canvas.height, <span class="number">0.1</span>, <span class="number">2000.0</span>, pMatrix);</span><br><span class="line"><span class="comment">// mat4.perspective 는 gl-matrix 라이브러리의 헬퍼 함수 </span></span><br><span class="line"><span class="comment">// (시야, 종횡비, 전방 및 후방 경계를 인자로 받는다.)</span></span><br><span class="line"><span class="comment">// 1. 시야 : 수직방향 시야각입니다.</span></span><br><span class="line"><span class="comment">// 2. 종횡비 : 화면 비 이고, 윈도우 크기에 의존합니다.</span></span><br><span class="line"><span class="comment">// 3. 근거리 잘라내기</span></span><br><span class="line"><span class="comment">// 4. 원거리 잘라내기</span></span><br></pre></td></tr></table></figure><iframe src="https://webgl2fundamentals.org/webgl/frustum-diagram.html" width="700px" height="600px" frameborder="0" allowfullscreen></iframe><p>출처 : [webglfundamentals.org]</p><p>위의 변환까지 모두 완료가 되면 GLSL에서<br>Model, View, Projection 을 모두 곱해줘야합니다.<br>이때 행렬의 곱 순서는 꼭 mvp의 역순으로 곱해주어야 합니다.<br>( MVPmatrix = projection X view X model; )</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script id=<span class="string">"shader-vs"</span> type=<span class="string">"x-shader/x-vertex"</span>&gt;</span><br><span class="line">    attribute vec3 aVertexPosition;</span><br><span class="line">    attribute vec4 aVertexColor;</span><br><span class="line"></span><br><span class="line">    uniform mat4 uMVMatrix;</span><br><span class="line">    uniform mat4 uPMatrix;</span><br><span class="line"></span><br><span class="line">    varying vec4 v_color;</span><br><span class="line">    <span class="keyword">void</span> main(<span class="keyword">void</span>) &#123;</span><br><span class="line">      gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, <span class="number">1.0</span>);</span><br><span class="line">      v_color = aVertexColor * <span class="number">0.5</span> + <span class="number">0.5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p>이번장은 여기서 마무리하고 다음장에서는 실제 3D 화면을 구현해 보도록 하겠습니다.</p><p><img src="/images/webgl6/matrix12.jpg" alt="matrix 변환"></p><p>핵심 위치에 라벨을 붙임</p><p><img src="/images/webgl6/matrix13.jpg" alt="matrix 변환"></p><p>라벨을 붙인후 각 라벨에 인덱스 정점을 활용</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- excerpt --&gt;
+&lt;h1 id=&quot;WebGL-7-View&quot;&gt;&lt;a href=&quot;#WebGL-7-View&quot; class=&quot;headerlink&quot; title=&quot;WebGL ( 7 - View )&quot;&gt;&lt;/a&gt;WebGL ( 7 - View )&lt;/h1&gt;&lt;p&gt;이
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://shs400.github.io/categories/javascript/"/>
+    
+      <category term="blog" scheme="http://shs400.github.io/categories/javascript/blog/"/>
+    
+      <category term="study" scheme="http://shs400.github.io/categories/javascript/blog/study/"/>
+    
+    
+      <category term="javascript" scheme="http://shs400.github.io/tags/javascript/"/>
+    
+      <category term="blog" scheme="http://shs400.github.io/tags/blog/"/>
+    
+      <category term="webgl" scheme="http://shs400.github.io/tags/webgl/"/>
+    
+  </entry>
   
   <entry>
     <title>WebGL ( 6 - Martrix )</title>
