@@ -567,6 +567,10 @@ h5, h6          { font-weight: bolder }
     display: block;
 }
 
+.content img[src*='#left']{
+    margin: 0;
+}
+
 .content ol, .content ul{
     margin-left: 15px;
 }
