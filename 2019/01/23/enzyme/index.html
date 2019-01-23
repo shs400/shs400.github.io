@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="google-site-verification" content="0csUmrnWzGjJHxGLCbpLsyMt0DB_sEo8fMmISVKEzlc">
+    <!--Description-->
+    
+        <meta name="description" content="Test Utility - Enzyme이번장은 앞장에서 설명한 Test FrameWork: Jest에 이어서React를 위한 자바스크립트 테스트 유틸리티인 Enzyme(엔자임)을 설명하려고 합니다.
+Enzyme이란?Enzyme은 airbnb에서 개발한 React용 컴포">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="shs400">
+    
+
+    <!--Keywords-->
+    
+        <meta name="keywords" content="javascript,blog,test,tdd,framework,jest,study,enzyme">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Test Utility - Enzyme">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Roy Blog">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="">
+    
+
+    <!--autoCanonical-->
+    <link rel="canonical" href="http://shs400.github.io/2019/01/23/enzyme/">
+
+    <!-- Title -->
+    
+    <title>Test Utility - Enzyme - Roy Blog</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-131731182-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/img/roy_favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/roy_favicon.ico" type="image/x-icon">
+    
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Roy Blog</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/tags">tags</a>
+            </li>
+            
+            <li>
+                <a href="/about">about</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://twitter.com/shs4005" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/shs400" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+            
+            
+            
+                <li><a href="atom.xml" class="rss" target="_blank" data-title="RSS"></a></li>
+            
+            
+                <li><a href="https://www.instagram.com/shs400" class="instagram" target="_blank" data-title="Instagram"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2019 hsSIM.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/default_detail_cover_02.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a class="previous disabled"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2019/01/22/jest/" class="next" data-title="Test FrameWork - ..."></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">Test Utility - Enzyme</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <!-- excerpt -->
+<h1 id="Test-Utility-Enzyme"><a href="#Test-Utility-Enzyme" class="headerlink" title="Test Utility - Enzyme"></a>Test Utility - Enzyme</h1><p>이번장은 앞장에서 설명한 <a href="//2019/01/22/jest/">Test FrameWork: Jest</a>에 이어서<br>React를 위한 자바스크립트 테스트 유틸리티인 Enzyme(엔자임)을 설명하려고 합니다.</p>
+<h2 id="Enzyme이란"><a href="#Enzyme이란" class="headerlink" title="Enzyme이란?"></a>Enzyme이란?</h2><p>Enzyme은 airbnb에서 개발한 <strong>React용 컴포넌트 테스트 플러그인</strong>입니다.<br>컴포넌트를 얖게(shallow) 렌더링해서 테스트 해 볼 수 있고, 전체 DOM을 불러와 확인 할 수도 있습니다.<br>또한 그 형태가 jQuery 형태로 컴포넌트를 조회할 수 있기 떄문에, <strong>컴포넌트 테스트</strong>로는 Enzyme이 매우 유용합니다.</p>
+<h2 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h2><p>우선 npm으로 enzyme &amp; enzyme-adapter-react-16 를 설치합니다.<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev enzyme enzyme-adapter-react-<span class="number">16</span></span><br></pre></td></tr></table></figure></p>
+<p>enzyme-adapter-react-16은<br>Enzyme이 react 16버전과 react 15버전에서 다르게 동작하기 때문에 enzyme-adapter-react-16 을 사용하여<br>react 16을 사용하고 있음을 알려주는 서드파티 입니다.</p>
+<p>자 이제 앞장(<a href="//2019/01/22/jest/">Test FrameWork: Jest</a>)에서 작성했던 Counter.test.jsx 테스트 코드에 enzyme을 적용해보겠습니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">"react-test-renderer"</span>;</span><br><span class="line"><span class="keyword">import</span> Counter <span class="keyword">from</span> <span class="string">'./index'</span>;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'Counter'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> component = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">  it(<span class="string">'renders correctly'</span>, () =&gt; &#123;</span><br><span class="line">    component = renderer.create(<span class="xml"><span class="tag">&lt;<span class="name">Counter</span> /&gt;</span>);</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  it('matches snapshot', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    expect(component).toMatchSnapshot();</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  it('increases correctly', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    component.getInstance().onIncrease();</span></span><br><span class="line"><span class="xml">    expect(component.getInstance().state.value).toBe(2);</span></span><br><span class="line"><span class="xml">    expect(component).toMatchSnapshot();</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  it('decreases correctly', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    component.getInstance().onDecrease();</span></span><br><span class="line"><span class="xml">    expect(component.getInstance().state.value).toBe(1);</span></span><br><span class="line"><span class="xml">    const tree = component.toJSON();</span></span><br><span class="line"><span class="xml">    expect(tree).toMatchSnapshot();</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml">&#125;);</span></span><br></pre></td></tr></table></figure></p>
+<p>위의 테스트 코드에 Enzyme을 적용하면<br>이제는 react-test-renderer 대신 Enzyme의 shallow를 사용하게됩니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; shallow, configure &#125; <span class="keyword">from</span> <span class="string">'enzyme'</span>;</span><br><span class="line"><span class="keyword">import</span> Adapter <span class="keyword">from</span> <span class="string">'enzyme-adapter-react-16'</span>;</span><br><span class="line"><span class="keyword">import</span> Counter <span class="keyword">from</span> <span class="string">'./index'</span>;</span><br><span class="line">configure(&#123; <span class="attr">adapter</span>: <span class="keyword">new</span> Adapter() &#125;);</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'Counter'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> component = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">  it(<span class="string">'renders correctly'</span>, () =&gt; &#123;</span><br><span class="line">    component = shallow(<span class="xml"><span class="tag">&lt;<span class="name">Counter</span> /&gt;</span>);</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  it('matches snapshot', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    expect(component).toMatchSnapshot();</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  it('increases correctly', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    component.instance().onIncrease();</span></span><br><span class="line"><span class="xml">    expect(component.state().value).toBe(2);</span></span><br><span class="line"><span class="xml">    expect(component).toMatchSnapshot();</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  it('decreases correctly', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    component.instance().onDecrease();</span></span><br><span class="line"><span class="xml">    expect(component.state().value).toBe(1);</span></span><br><span class="line"><span class="xml">    expect(component).toMatchSnapshot();</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml">&#125;);</span></span><br></pre></td></tr></table></figure></p>
+<p>Enzyme에서 configure를 제외한다면 크게는 3가지 메서드가 존재하고, 그 메서드는 shallow, mount, render 입니다.</p>
+<ol>
+<li>shallow: 간단한 컴포넌트를 메모리에 렌더링합니다. ( 단일 컴포넌트를 테스트할 때 유용합니다. )</li>
+<li>mount: HOC나 자식 컴포넌트 까지 전부 렌더링합니다. ( 다른 컴포넌트와의 관계를 테스트할 때 유용합니다. )</li>
+<li>render: 컴포넌트를 정적인 html로 렌더링합니다. ( 컴포넌트가 브라우저에 붙었을 때 html로 어떻게 되는지 판단할 때 사용합니다.)</li>
+</ol>
+<hr>
+<p>위의 코드가 Enzyme을 적용한 코드입니다.<br>이렇게만 보면 굳이 왜? react-test-renderer 대신 Enzyme의 shallow를 사용하지? 라고 생각할 수 있을 것 입니다.</p>
+<p>하지만<br>Enzyme을 사용하면 저희는 DOM이벤트를 시뮬레이트 해 볼 수 있습니다.<br>DOM이벤트를 시뮬레이트한다? 필자는 글로봐서는 감이 오지 않았습니다.</p>
+<p>Enzyme API중 simulate를 사용하게 되는 것 인데,<br>위의 Enzyme 적용 테스트 코드 내용 중<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">component.instance().onIncrease()</span><br></pre></td></tr></table></figure></p>
+<p>처럼 함수를 실행하는 것이 아니라<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">component.find(<span class="string">'.increaseButton'</span>).simulate(<span class="string">'click'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>처럼 실제로 카운트를 증가시키는 버튼을 마우스를 클릭하는 이벤트를 시뮬레이션 할 수 있게 되고,<br>아래의 테스트 코드처럼 테스트 할수 있게 됩니다.<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">it('increases correctly', () =&gt; &#123;</span><br><span class="line">  component.<span class="built_in">find</span>('.increaseButton').simulate('click');</span><br><span class="line">  expect(component.state().value).toBe(<span class="number">2</span>);</span><br><span class="line">  expect(component).toMatchSnapshot();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>이렇게 Enzyme을 사용하면 특정 DOM에 이벤트를 시뮬레이트 할 수 도 있고, 그 외에도 수 많은 기능들이 있습니다.<br>나머지 수많은 기능들은 <a href="https://airbnb.io/enzyme/" target="_blank" rel="noopener">Enzyme 공식 홈페이지</a>를 참고하여 필요에 따라 사용하시길 바랍니다.</p>
+<p>마지막으로 Jest와 Enzyme을 같이 사용하면 스냅샷이 보기 힘든 형태로 나오게 되는데 이 부분은<br>pakage.json에<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"jest"</span>: &#123;</span><br><span class="line">    <span class="string">"snapshotSerializers"</span>: [</span><br><span class="line">      <span class="string">"enzyme-to-json/serializer"</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>를 추가해주시면 됩니다.</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/blog/">blog</a> <a href="/tags/javascript/">javascript</a> <a href="/tags/test/">test</a> <a href="/tags/tdd/">tdd</a> <a href="/tags/framework/">framework</a> <a href="/tags/jest/">jest</a> <a href="/tags/enzyme/">enzyme</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr>
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'shs400';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>
