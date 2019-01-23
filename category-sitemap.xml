@@ -29,41 +29,6 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/</loc>
-        <lastmod>2019-01-23T07:21:05.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/</loc>
-        <lastmod>2019-01-23T07:21:05.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/</loc>
-        <lastmod>2019-01-23T07:21:05.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/</loc>
-        <lastmod>2019-01-23T07:21:05.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/study/</loc>
-        <lastmod>2019-01-23T07:21:05.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/study/enzyme/</loc>
         <lastmod>2019-01-23T07:21:05.317Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -71,22 +36,57 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/categories/javascript/</loc>
+        <loc>http://shs400.github.io/categories/javascript/blog/study/</loc>
         <lastmod>2019-01-23T07:21:33.849Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/</loc>
+        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/categories/javascript/blog/</loc>
-        <lastmod>2019-01-23T07:21:33.849Z</lastmod>
+        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/study/</loc>
-        <lastmod>2019-01-23T07:21:33.849Z</lastmod>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/</loc>
+        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/</loc>
+        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/</loc>
+        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/</loc>
+        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/study/</loc>
+        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
