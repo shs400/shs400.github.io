@@ -153,7 +153,7 @@ Enzyme이란?Enzyme은 airbnb에서 개발한 React용 컴포">
 
     <ul class="btn clearfix">
         
-        <li><a class="previous disabled"></a></li>
+        <li><a href="/2019/01/29/immutable/" class="previous" data-title="immutable"></a></li>
         
         <li><a href="/" class="grid" data-title="Portfolio"></a></li>
         
@@ -187,7 +187,9 @@ Enzyme이란?Enzyme은 airbnb에서 개발한 React용 컴포">
 <li>render: 컴포넌트를 정적인 html로 렌더링합니다. ( 컴포넌트가 브라우저에 붙었을 때 html로 어떻게 되는지 판단할 때 사용합니다.)</li>
 </ol>
 <hr>
-<p>위의 코드가 Enzyme을 적용한 코드입니다.<br>이렇게만 보면 굳이 왜? react-test-renderer 대신 Enzyme의 shallow를 사용하지? 라고 생각할 수 있을 것 입니다.</p>
+<p>※ shallow 와 mount 두 API는 유사한 동작을 합니다.<br>그러나 mount가 좀 더 실제에 가깝게 동작을 합니다.<br>공식문서에는 테스트할 컴포넌트가 DOM API를 사용하거나 라이프사이클 훅 을 모두 활용할떄 mount API를 사용하는것을 권장하고 있습니다.</p>
+<p>특히 라이프 사이클 훅 관련하여 shallow와 mount는 차이점이 있습니다.<br>mount API는 모든 라이프사이클 훅이 호출되고,<br>shallow API는 componentDidmount 와 componentDidUpdate를 제외한 라이프사이클 훅이 호출된다는 점입니다.<br>이러한 차이점을 유의하여 필요에 따라 API를 사용하시면 됩니다. </p>
+<p>위의 코드가 Enzyme을 적용한 코드인데<br>이렇게만 보면 굳이 왜? react-test-renderer 대신 Enzyme의 shallow를 사용하지? 라고 생각할 수 있을 것 입니다.</p>
 <p>하지만<br>Enzyme을 사용하면 저희는 DOM이벤트를 시뮬레이트 해 볼 수 있습니다.<br>DOM이벤트를 시뮬레이트한다? 필자는 글로봐서는 감이 오지 않았습니다.</p>
 <p>Enzyme API중 simulate를 사용하게 되는 것 인데,<br>위의 Enzyme 적용 테스트 코드 내용 중<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">component.instance().onIncrease()</span><br></pre></td></tr></table></figure></p>
 <p>처럼 함수를 실행하는 것이 아니라<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">component.find(<span class="string">'.increaseButton'</span>).simulate(<span class="string">'click'</span>);</span><br></pre></td></tr></table></figure></p>

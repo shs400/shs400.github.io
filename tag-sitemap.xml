@@ -10,57 +10,71 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/tags/enzyme/</loc>
-        <lastmod>2019-01-23T07:21:05.317Z</lastmod>
+        <loc>http://shs400.github.io/tags/webgl/</loc>
+        <lastmod>2019-01-23T07:25:14.970Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/test/</loc>
-        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
+        <lastmod>2019-01-24T00:58:04.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/tdd/</loc>
-        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
+        <lastmod>2019-01-24T00:58:04.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/framework/</loc>
-        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
+        <lastmod>2019-01-24T00:58:04.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/jest/</loc>
-        <lastmod>2019-01-23T07:23:32.390Z</lastmod>
+        <lastmod>2019-01-24T00:58:04.906Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/tags/enzyme/</loc>
+        <lastmod>2019-01-24T00:58:04.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/blog/</loc>
-        <lastmod>2019-01-23T07:25:14.970Z</lastmod>
+        <lastmod>2019-01-29T08:21:19.524Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/javascript/</loc>
-        <lastmod>2019-01-23T07:25:14.970Z</lastmod>
+        <lastmod>2019-01-29T08:21:19.524Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://shs400.github.io/tags/webgl/</loc>
-        <lastmod>2019-01-23T07:25:14.970Z</lastmod>
+        <loc>http://shs400.github.io/tags/study/</loc>
+        <lastmod>2019-01-29T08:21:19.524Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/tags/immutable/</loc>
+        <lastmod>2019-01-29T08:21:19.524Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
