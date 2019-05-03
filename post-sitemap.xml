@@ -8,6 +8,46 @@
     </url>
 
     <url>
+        <loc>http://shs400.github.io/2018/01/02/script-study02/</loc>
+        <lastmod>2019-05-03T06:51:08.093Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/2018/10/31/WebGL-4/</loc>
+        <lastmod>2019-05-03T06:33:27.578Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/2018/08/06/WebGL-1/</loc>
+        <lastmod>2019-05-03T06:33:27.575Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/2019/04/23/Docz/</loc>
+        <lastmod>2019-05-03T06:33:27.571Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/2019/01/23/enzyme/</loc>
+        <lastmod>2019-05-03T06:33:27.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://shs400.github.io/2019/03/11/WebGL-9/</loc>
         <lastmod>2019-03-15T06:08:14.644Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -34,14 +74,6 @@
     <url>
         <loc>http://shs400.github.io/2019/01/29/immutable/</loc>
         <lastmod>2019-01-29T08:21:19.524Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/2019/01/23/enzyme/</loc>
-        <lastmod>2019-01-24T00:58:04.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -88,14 +120,6 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/2018/08/06/WebGL-1/</loc>
-        <lastmod>2019-01-23T07:21:33.833Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://shs400.github.io/2018/12/24/WebGL-7/</loc>
         <lastmod>2019-01-23T07:21:33.826Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -112,14 +136,6 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/2018/01/02/script-study02/</loc>
-        <lastmod>2019-01-22T08:54:12.116Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://shs400.github.io/2017/12/29/script-study01/</loc>
         <lastmod>2019-01-22T08:54:04.480Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -130,14 +146,6 @@
     <url>
         <loc>http://shs400.github.io/2018/01/02/script-study03/</loc>
         <lastmod>2019-01-22T08:53:43.928Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/2018/10/31/WebGL-4/</loc>
-        <lastmod>2019-01-10T01:16:44.877Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

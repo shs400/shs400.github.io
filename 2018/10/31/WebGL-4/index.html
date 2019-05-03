@@ -188,7 +188,7 @@ Shader의 이해GPU는 아래와 같이 2가지 일을 합니다.
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> primitiveType = gl.TRIANGLES;</span><br><span class="line"><span class="keyword">var</span> offset = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> count = <span class="number">9</span>;</span><br><span class="line">gl.drawArrays(primitiveType, offset, count);</span><br></pre></td></tr></table></figure>
 <p><img src="/images/vertex-shader-anim.gif" alt="버텍스셰이"><br>출처 : webglfundamentals.org</p>
 <p>위의 이미지와 같이 원본 정점 9개를 작성한 vertexShader 함수를 통하여<br>GLSL에서 정의된 변수인 gl_Position에 주면 클립공간 정점으로 GPU에 저장합니다.</p>
-<p>gl.drawArrays() 함수를 호출할 떄 primitiveType을 TRIANGLES로 지정하였기 때문에<br>3개의 클립공간의 정점이 생성될 때마다 GPU는 이를 이용해 삼각형을 그리게 됩니다.</p>
+<p>gl.drawArrays() 함수를 호출할 때 primitiveType을 TRIANGLES로 지정하였기 때문에<br>3개의 클립공간의 정점이 생성될 때마다 GPU는 이를 이용해 삼각형을 그리게 됩니다.</p>
 <p>이 삼각형을 그릴때 아래의 그림과 같이 3개의 정점을 기준으로 래스터화 합니다.</p>
 <ul>
 <li>래스터화 = ‘삼각형을 픽셀로 그림’<br>Ex) <img src="/images/webgl4/webgl4_1.png" alt="정점삼각형"> &gt;&gt; <img src="/images/webgl4/webgl4_2.png" alt="삼각형래스터화"></li>

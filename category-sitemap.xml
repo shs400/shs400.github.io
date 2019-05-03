@@ -29,50 +29,8 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/study/enzyme/</loc>
-        <lastmod>2019-01-24T00:58:04.906Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://shs400.github.io/categories/javascript/blog/study/immutable/</loc>
         <lastmod>2019-01-29T08:21:19.524Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/</loc>
-        <lastmod>2019-01-31T06:29:41.088Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/</loc>
-        <lastmod>2019-01-31T06:29:41.088Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/</loc>
-        <lastmod>2019-01-31T06:29:41.088Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/</loc>
-        <lastmod>2019-01-31T06:29:41.088Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/study/</loc>
-        <lastmod>2019-01-31T06:29:41.088Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -92,22 +50,71 @@
     </url>
 
     <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/</loc>
+        <lastmod>2019-05-03T06:33:27.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/</loc>
+        <lastmod>2019-05-03T06:33:27.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/</loc>
+        <lastmod>2019-05-03T06:33:27.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/</loc>
+        <lastmod>2019-05-03T06:33:27.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/study/</loc>
+        <lastmod>2019-05-03T06:33:27.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/test/tdd/framework/jest/study/enzyme/</loc>
+        <lastmod>2019-05-03T06:33:27.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/study/Docz/</loc>
+        <lastmod>2019-05-03T06:33:27.571Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://shs400.github.io/categories/javascript/</loc>
-        <lastmod>2019-03-15T06:08:14.644Z</lastmod>
+        <lastmod>2019-05-03T06:51:08.093Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/categories/javascript/blog/</loc>
-        <lastmod>2019-03-15T06:08:14.644Z</lastmod>
+        <lastmod>2019-05-03T06:51:08.093Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/categories/javascript/blog/study/</loc>
-        <lastmod>2019-03-15T06:08:14.644Z</lastmod>
+        <lastmod>2019-05-03T06:51:08.093Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
