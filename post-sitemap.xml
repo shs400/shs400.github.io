@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://shs400.github.io/2019/04/23/Docz/</loc>
+        <lastmod>2019-05-03T06:57:05.799Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://shs400.github.io/2018/01/02/script-study02/</loc>
         <lastmod>2019-05-03T06:51:08.093Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -26,14 +34,6 @@
     <url>
         <loc>http://shs400.github.io/2018/08/06/WebGL-1/</loc>
         <lastmod>2019-05-03T06:33:27.575Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://shs400.github.io/2019/04/23/Docz/</loc>
-        <lastmod>2019-05-03T06:33:27.571Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
