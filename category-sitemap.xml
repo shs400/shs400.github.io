@@ -92,29 +92,43 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/categories/javascript/</loc>
+        <loc>http://shs400.github.io/categories/javascript/blog/study/Docz/</loc>
         <lastmod>2019-05-03T08:10:37.534Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/</loc>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/categories/javascript/blog/</loc>
-        <lastmod>2019-05-03T08:10:37.534Z</lastmod>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/categories/javascript/blog/study/</loc>
-        <lastmod>2019-05-03T08:10:37.534Z</lastmod>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://shs400.github.io/categories/javascript/blog/study/Docz/</loc>
-        <lastmod>2019-05-03T08:10:37.534Z</lastmod>
+        <loc>http://shs400.github.io/categories/javascript/blog/study/style/</loc>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/categories/javascript/blog/study/style/css/</loc>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

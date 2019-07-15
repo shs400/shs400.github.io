@@ -3,13 +3,6 @@
 
 
     <url>
-        <loc>http://shs400.github.io/tags/css/</loc>
-        <lastmod>2019-01-23T07:20:30.124Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://shs400.github.io/tags/immutable/</loc>
         <lastmod>2019-01-29T08:21:19.524Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -73,29 +66,43 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/tags/javascript/</loc>
+        <loc>http://shs400.github.io/tags/Docz/</loc>
         <lastmod>2019-05-03T08:10:37.534Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/tags/css/</loc>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/blog/</loc>
-        <lastmod>2019-05-03T08:10:37.534Z</lastmod>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/tags/javascript/</loc>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/study/</loc>
-        <lastmod>2019-05-03T08:10:37.534Z</lastmod>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://shs400.github.io/tags/Docz/</loc>
-        <lastmod>2019-05-03T08:10:37.534Z</lastmod>
+        <loc>http://shs400.github.io/tags/style/</loc>
+        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
