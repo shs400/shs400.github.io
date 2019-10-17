@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="google-site-verification" content="0csUmrnWzGjJHxGLCbpLsyMt0DB_sEo8fMmISVKEzlc">
+    <!--Description-->
+    
+        <meta name="description" content="firebase를 시작해보자firebase란파이어베이스는 2011년 파이어베이스사가 개발하고 2014년 구글에 인수된 모바일 및 웹 애플리케이션 개발 플랫폼입니다. (위키백과)파이어베이스는 클라우드 서비스를 제공해주며 동시에 백엔드의 기능을 가지고 있습니다.
+필자가 파">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="shs400">
+    
+
+    <!--Keywords-->
+    
+        <meta name="keywords" content="frontend, developer, javascript, css, webgl, blog">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="firebase를 시작해보자">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Roy Blog">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="">
+    
+
+    <!--autoCanonical-->
+    <link rel="canonical" href="http://shs400.github.io/2019/10/17/firebase/">
+
+    <!-- Title -->
+    
+    <title>firebase를 시작해보자 - Roy Blog</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-131731182-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/img/roy_favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/roy_favicon.ico" type="image/x-icon">
+    
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Roy Blog</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/tags">tags</a>
+            </li>
+            
+            <li>
+                <a href="/about">about</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://twitter.com/shs4005" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/shs400" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+            
+            
+            
+                <li><a href="atom.xml" class="rss" target="_blank" data-title="RSS"></a></li>
+            
+            
+                <li><a href="https://www.instagram.com/shs400" class="instagram" target="_blank" data-title="Instagram"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2019 hsSIM.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/default_detail_cover_02.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a class="previous disabled"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2019/07/11/styled-component/" class="next" data-title="styled-components"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">firebase를 시작해보자</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <h1 id="firebase를-시작해보자"><a href="#firebase를-시작해보자" class="headerlink" title="firebase를 시작해보자"></a>firebase를 시작해보자</h1><h2 id="firebase란"><a href="#firebase란" class="headerlink" title="firebase란"></a>firebase란</h2><p>파이어베이스는 2011년 파이어베이스사가 개발하고 2014년 구글에 인수된 모바일 및 웹 애플리케이션 개발 플랫폼입니다. (위키백과)<br>파이어베이스는 클라우드 서비스를 제공해주며 동시에 백엔드의 기능을 가지고 있습니다.</p>
+<p>필자가 파이어베이스를 사용하게 된 계기는 웹사이트를 만들고 싶은데 서버가 필요했고,<br>서버구축을 할줄 모르는 상태에서 파이어베이스는 호스팅, 데이터베이스, 스토리지, 인증, FCM 등을 쉽게 사용할수 있게 해기 때문에 파이어베이스를 선택하였습니다.</p>
+<h2 id="firebase-환경-설정"><a href="#firebase-환경-설정" class="headerlink" title="firebase 환경 설정"></a>firebase 환경 설정</h2><p>1) firebase 프로젝트 만들기<br>우선 firebase를 사용하려면 당연히 <a href="https://firebase.google.com" target="_blank" rel="noopener">https://firebase.google.com</a>에 접속을 해줍니다.<br>그 후 회원가입 or 로그인을해 주시고 console(콘솔)로 이동을 해줍니다. (우측 상단에 콘솔로 이동 링크)</p>
+<p>콘솔 페이지로 이동후 새 플젝트 만들기를 해주시면 파이어베이스 프로젝트가 생성이 완료가 됩니다. ( 프로젝트 생성되는데 약간의 시간이 걸림)<br>생성이 완료가 되면 내가 만든 프로젝트 콘솔 페이지가 아래의 그림과 같이 나타나게 됩니다.<br><img src="/images/firebase/firebase1.png" alt="firebase"></p>
+<p>마지막으로 첫화면에서 웹앱 추가 버튼을 클릭하여<br><img src="/images/firebase/firebase2.png" alt="firebase"><br>앱 닉네임을 등록하면 나의 앱이 등록되며<br><img src="/images/firebase/firebase3.png" alt="firebase"><br>firebase SDK와 해당 앱의 firebaseConfig 값이 부여되어 보여줍니다.<br><img src="/images/firebase/firebase4.png" alt="firebase"></p>
+<p>이제 여러분의 프로젝트에 추가할 firebase 프로젝트가 기본적으로 준비되었습니다.<br>마지막으로 SDK 추가 및 firebaseConfig 초기화에 대해 설명을 하고 기능에 대해 설명 및 사용법을 알아보겠습니다.</p>
+<h2 id="firebase-SDK-추가-및-firebaseConfig-초기화"><a href="#firebase-SDK-추가-및-firebaseConfig-초기화" class="headerlink" title="firebase SDK 추가 및 firebaseConfig 초기화"></a>firebase SDK 추가 및 firebaseConfig 초기화</h2><p>우선 위의 환경설정 마지막에 나온 firebase SDK 및 firebaseConfig를 본인의 프로젝트에 추가 및 초기화 해주도록합니다.</p>
+<h3 id="SDK-추가"><a href="#SDK-추가" class="headerlink" title="SDK 추가"></a>SDK 추가</h3><p>SDK를 추가하는 방식으로 </p>
+<ol>
+<li>호스팅 URL에서 추가</li>
+<li>CDN에서 추가</li>
+<li>모듈 Bundler 사용</li>
+<li>Node.js앱 </li>
+</ol>
+<p>이렇게 4가지 방식이 존재하고, 이 글에서는 모듈 Bundler를 사용하여 추가 해 보도록 하겠습니다.<br>(* 환경설정 마지막에 나온 firebase SDK는 2번 방법 )</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install --save firebase</span><br><span class="line"></span><br><span class="line"><span class="comment">// firebase 앱이 항상 필요합니다.</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> firebase <span class="keyword">from</span> <span class="string">"firebase/app"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 사용할 firebase 기능 추가</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"firebase/auth"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"firebase/firestore"</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="firebaseConfig-초기화"><a href="#firebaseConfig-초기화" class="headerlink" title="firebaseConfig 초기화"></a>firebaseConfig 초기화</h3><p>SDK를 추가했으면 이제 firebase의 정보를 본인의 프로젝트 정보로 초기화 해줍니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> firebaseConfig = &#123;</span><br><span class="line">  apiKey: <span class="string">"xxxxxxxxxx"</span>,</span><br><span class="line">  authDomain: <span class="string">"xxxxxxxxxx.firebaseapp.com"</span>,</span><br><span class="line">  databaseURL: <span class="string">"https://xxxxxxxxxx.firebaseio.com"</span>,</span><br><span class="line">  projectId: <span class="string">"xxxxxxxxxx"</span>,</span><br><span class="line">  storageBucket: <span class="string">"xxxxxxxxxx.appspot.com"</span>,</span><br><span class="line">  messagingSenderId: <span class="string">"xxxxxxxxxx"</span>,</span><br><span class="line">  appId: <span class="string">"xxxxxxxxxx"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// Initialize Firebase</span></span><br><span class="line">firebase.initializeApp(firebaseConfig);</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>firebaseConfig의 값은 위에서 만든 본인의 firebase앱의 정보를 넣어주면 됩니다. </li>
+</ul>
+<p>여기까지 되셨다면 SDK추가와 config 초기화 까지 완료된것입니다.<br>이제부터는 firebase 기능에 대하여 설명 및 사용법을 알아보겠습니다. </p>
+<h2 id="firebase-기능"><a href="#firebase-기능" class="headerlink" title="firebase 기능"></a>firebase 기능</h2><p>이 글에서는 firebase의 기능 중<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. Authentication(인증)</span><br><span class="line">2. Database(데이터베이스 - 예시는 읽기만)</span><br><span class="line">3. Storage(저장소 - 예시는 읽기만)</span><br></pre></td></tr></table></figure></p>
+<p>3가지 기능에 대해 알아보겟습니다.</p>
+<h3 id="Authentication-인증"><a href="#Authentication-인증" class="headerlink" title="Authentication(인증)"></a>Authentication(인증)</h3><p>파이어베이스는 인증 시스템을 지원하기때문에 로그인 기능을 추가할 수 있습니다.<br>인증방법의 종류에는 아래와 같은 인증 방법이 있습니다.</p>
+<ul>
+<li>이메일/비밀번호 (사용자 직접 등록)</li>
+<li>전화</li>
+<li>Google</li>
+<li>Play 게임</li>
+<li>게임센터</li>
+<li>Facebook</li>
+<li>Twitter</li>
+<li>Github</li>
+<li>Yahoo</li>
+<li>Microsoft</li>
+</ul>
+<p>이 글에서는 사용자를 직업 등록하는 방법에 대해 설명하겠습니다.<br>우선 사용자 등록을 합니다.( 아주 간단합니다. )<br>자신의 firebase 프로젝트 console화면의 Authentication 탭에 들어가보면 사용자, 로그인방법, 템플릿, 사용량 이렇게 4가지의 메뉴가 존재하는데<br>사용자 탭에서 사용자를 추가해주도록합니다.</p>
+<p><img src="/images/firebase/firebase5.png" alt="firebase"></p>
+<p>위처럼 firebase에 로그인 아이디와 비밀번호를 입력하여 사용자를 추가한 후 로그인 방법 탭에서 이메일/비밀번호를 활성화 해준 후<br>본인의 코드에서 아래와 같이 firebase.auth().signInWithEmailAndPassword(email, pwd)를 호출해주면<br>성공시 실패시 로직을 작성할 수 있게 됩니다.<br>( firebase.auth().signInWithEmailAndPassword(email, pwd) 는 Promise 반환 )</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> firebase <span class="keyword">from</span> <span class="string">"firebase"</span>;</span><br><span class="line">firebase.auth().signInWithEmailAndPassword(email, pwd)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">firebaseUser</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'인증 성공'</span>)</span><br><span class="line">    <span class="comment">// Todo add logic</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'인증 실패 : '</span>, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>이로써 저희는 로그인 기능을 구현할 수 있게 되었습니다.</p>
+<h3 id="Database-데이터베이스"><a href="#Database-데이터베이스" class="headerlink" title="Database(데이터베이스)"></a>Database(데이터베이스)</h3><p>1) 실시간데이터베이스 : Firebase의 기존 데이터베이스로서, 여러 클라이언트에서 실시간으로 상태를 동기화해야 하는 모바일 앱을 위한 효율적이고 지연 시간이 짧은 솔루션입니다.<br>오프라인에도 실시간 데이터 통신을 하면서 최신상태 유지, api까지 지원해줌, 잠금모드와 테스트 모드가 있는데, 개발할때는 누구나 읽고, 쓸수있도록 테스트 모드로 하는 것을 추천합니다.<br>기본적으로 json형식으로 지원해줍니다.</p>
+<ul>
+<li>데이터를 하나의 큰 JSON 트리로 저장합니다.<br>– 단순한 데이터를 매우 쉽게 저장합니다.<br>– 복잡한 계층적 데이터를 대규모로 정리하기 어렵습니다.</li>
+</ul>
+<p>2) Cloud Firestore : </p>
+<ul>
+<li>데이터를 문서 컬렉션으로 저장합니다.<br>– 단순한 데이터를 JSON과 매우 비슷한 방식으로 문서에 쉽게 저장합니다.<br>– 문서 안의 하위 컬렉션을 사용하여 복잡한 계층적 데이터를 대규모로 쉽게 정리할 수 있습니다.<br>– 비정규화 및 데이터 평면화가 덜 필요합니다.</li>
+</ul>
+<hr>
+<p>이외의 차이점은 <a href="https://firebase.google.com/docs/firestore/rtdb-vs-firestore?hl=ko" target="_blank" rel="noopener">https://firebase.google.com/docs/firestore/rtdb-vs-firestore?hl=ko</a> 에서 확인 하실 수 있습니다.</p>
+<p>firestore는 실시간 데이터베이스보다 풍부하고 빠른 쿼리와 우수한 확장성을 제공한다고 나와있지만 필자는 JSON 형식으로 지원해주는 RealTime 데이터베이스를 사용하려고 합니다.<br>처음 Database 화면에 접속하면 데이터베이스 만들기 버튼 바로 보이는데 이는 FireStore 데이터베이스이고 아래쪽에 RealTime 데이터베이스가 존재합니다.</p>
+<p><img src="/images/firebase/firebase7.png" alt="firebase"></p>
+<p>데이터베이스를 만들때 규칙을 설정하게되는데 불러와야하기 때문에 테스트모드로 설정을 해줍니다. (규칙은 바꿀수 있음)</p>
+<p><img src="/images/firebase/firebase8.png" alt="firebase"><br>데이터베이스의 값입력을하면 위와같은 구조로 나타나게되고 JSON구조이기 때문에 접근하기 쉬울것이라 생각됩니다.<br>(필자는 아무렇지않게 firestore를 사용해놓고 호출은 RealTime database를 호출하여 헤멘적이있는데 다른 분들은 안그러실거라 믿습니다 ㅇㅅㅇ;)</p>
+<p>이제 위에서 입력한 값을 코드에서 가져와서 사용해보겠습니다.<br>데이터 베이스의 값을 읽고 변경사항에 대해 수신 대기하려면 firebase.atabase.Reference의 on() 또는 once() 메소드를 사용하여 이벤트를 관찰합니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ref = firebase.database().ref(<span class="string">'/'</span>); <span class="comment">// ref('database경로'); / 가 최상위 루</span></span><br><span class="line">ref.once(<span class="string">'value'</span>).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'res : '</span>, res)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//or </span></span><br><span class="line"></span><br><span class="line">ref.on(<span class="string">'value'</span>, snapshot =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'snapshot : '</span>, snapshot)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>쓰기와 업데이트 또는 삭제관련해서는 <a href="https://firebase.google.com/docs/database/web/read-and-write?hl=ko#get_a_database_reference" target="_blank" rel="noopener">https://firebase.google.com/docs/database/web/read-and-write?hl=ko#get_a_database_reference</a>를 참고하시면 됩니다.</p>
+<h3 id="Storage-저장소"><a href="#Storage-저장소" class="headerlink" title="Storage(저장소)"></a>Storage(저장소)</h3><p>firebase Storage<br>문서, 사진, 파일, 동영상등 각종 파일을 저장하는 곳 이라고 생각하면 됩니다.<br>개발자들이 쉽게 파일들을 업로드하고 다운로드 할 수 있도록 해줍니다.</p>
+<p>데이터베이스와 마찬가지로 규칙을 설정해주고 Storage의 위치를 지정해줍니다.<br>그 후 Storage 화면에서 파일을 업로드 할 수 있습니다.<br><img src="/images/firebase/firebase9.png" alt="firebase"></p>
+<p>firebase.storage().ref().child(‘root’).getDownloadURL()를 사용하여 업로드 한 이미지의 주소를 받아올 수 있습니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> storage = firebase.storage().ref();</span><br><span class="line">storage.child(<span class="string">'test_img.png'</span>).getDownloadURL().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'res : '</span>, res);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>추가로 파일의 업로드와 삭제에 대한 정보는<br>업로드<br><a href="https://firebase.google.com/docs/storage/web/upload-files#manage_uploads" target="_blank" rel="noopener">https://firebase.google.com/docs/storage/web/upload-files#manage_uploads</a><br>삭제<br><a href="https://firebase.google.com/docs/storage/web/delete-files?hl=ko" target="_blank" rel="noopener">https://firebase.google.com/docs/storage/web/delete-files?hl=ko</a><br>에서 확인하시면 됩니다.</p>
+<p>이번 글에서는 firebase에 대해 간단하게 알아보았고, 현재 개인적으로 firebase를 적용하고있는 Toy Project를 진행하면서 아직 사용해보지 않은 db와 storage 쪽의 업로드 및 삭제 혹은 firebase의 추가적으로 다른 기능들까지 사용해보고 글을 쓰게 될 것 같습니다.</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr>
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'shs400';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>
