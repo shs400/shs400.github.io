@@ -80,29 +80,43 @@
     </url>
 
     <url>
-        <loc>http://shs400.github.io/tags/blog/</loc>
+        <loc>http://shs400.github.io/tags/style/</loc>
         <lastmod>2019-07-15T00:55:07.132Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/tags/blog/</loc>
+        <lastmod>2020-01-02T09:38:02.374Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/javascript/</loc>
-        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
+        <lastmod>2020-01-02T09:38:02.374Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://shs400.github.io/tags/study/</loc>
-        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
+        <lastmod>2020-01-02T09:38:02.374Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://shs400.github.io/tags/style/</loc>
-        <lastmod>2019-07-15T00:55:07.132Z</lastmod>
+        <loc>http://shs400.github.io/tags/kotlin/</loc>
+        <lastmod>2020-01-02T09:38:02.374Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://shs400.github.io/tags/language/</loc>
+        <lastmod>2020-01-02T09:38:02.374Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

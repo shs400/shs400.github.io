@@ -153,7 +153,7 @@
 
     <ul class="btn clearfix">
         
-        <li><a class="previous disabled"></a></li>
+        <li><a href="/2020/01/02/kotlin01/" class="previous" data-title="KotlinJS 를 시작해보자 ( hello world )"></a></li>
         
         <li><a href="/" class="grid" data-title="Portfolio"></a></li>
         
@@ -236,6 +236,349 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> storage = firebase.storage().ref();</span><br><span class="line">storage.child(<span class="string">'test_img.png'</span>).getDownloadURL().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'res : '</span>, res);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>추가로 파일의 업로드와 삭제에 대한 정보는<br>업로드<br><a href="https://firebase.google.com/docs/storage/web/upload-files#manage_uploads" target="_blank" rel="noopener">https://firebase.google.com/docs/storage/web/upload-files#manage_uploads</a><br>삭제<br><a href="https://firebase.google.com/docs/storage/web/delete-files?hl=ko" target="_blank" rel="noopener">https://firebase.google.com/docs/storage/web/delete-files?hl=ko</a><br>에서 확인하시면 됩니다.</p>
 <p>이번 글에서는 firebase에 대해 간단하게 알아보았고, 현재 개인적으로 firebase를 적용하고있는 Toy Project를 진행하면서 아직 사용해보지 않은 db와 storage 쪽의 업로드 및 삭제 혹은 firebase의 추가적으로 다른 기능들까지 사용해보고 글을 쓰게 될 것 같습니다.</p>
+<pre><code>{
+  &apos;level&apos;: &apos;master&apos;,
+  &apos;name&apos;: &apos;김대원&apos;,
+  &apos;alias&apos;: &apos;원바&apos;,
+  &apos;age&apos;: 32,
+  &apos;avility&apos;: {
+    &apos;수비&apos;: 1.4,
+    &apos;피지컬&apos;: 0.4,
+    &apos;스피드&apos;: 0.9,
+    &apos;창조력&apos;: 1.1,
+    &apos;공격&apos;: 1,
+    &apos;기술&apos;: 1,
+    &apos;제공권&apos;: 0.2,
+    &apos;정신&apos;: 0.5
+  },
+  &apos;img&apos;: &apos;https://firebasestorage.googleapis.com/v0/b/fsa-project-60f97.appspot.com/o/wonba_slice.jpg?alt=media&amp;token=b2c0292b-7238-4ee3-8222-0a687f6aa6c8&apos;,
+  &apos;intro&apos;: &apos;하고싶은 말 - 원래 바보&apos;,
+  &apos;contact&apos;: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;김태양&apos;,
+  alias: &apos;매탱&apos;,
+  age: &apos;32&apos;,
+  avility: {
+    수비: 1.24,
+    피지컬: 2.11,
+    스피드: 0.11,
+    창조력: 0.31,
+    공격: 1.03,
+    기술: 0.44,
+    제공권: 0.33,
+    정신: 0.72
+  },
+  img: &apos;https://firebasestorage.googleapis.com/v0/b/fsa-project-60f97.appspot.com/o/taeng_slice.jpg?alt=media&amp;token=eeba83dc-26a5-453a-b5b9-639d33f9f01f&apos;,
+  intro: &apos;하고싶은말 - 탱탱한 매탱&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;박원일&apos;,
+  alias: &apos;박양&apos;,
+  age: &apos;32&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;https://firebasestorage.googleapis.com/v0/b/fsa-project-60f97.appspot.com/o/parkyang.jpeg?alt=media&amp;token=3e54dc99-0397-4315-84b3-775dff2800db&apos;,
+  intro: &apos;하고싶은말 - 야이 C XXXXXX&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;권세완&apos;,
+  alias: &apos;권세&apos;,
+  age: &apos;32&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;https://firebasestorage.googleapis.com/v0/b/fsa-project-60f97.appspot.com/o/gwonse.jpeg?alt=media&amp;token=df4ab5ee-048d-40ae-ae80-d26baa861a1c&apos;,
+  intro: &apos;하고싶은말 - 지렸당&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;심현수&apos;,
+  alias: &apos;면수&apos;,
+  age: &apos;32&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;이지훈&apos;,
+  alias: &apos;이지&apos;,
+  age: &apos;32&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;황지훈&apos;,
+  alias: &apos;황&apos;,
+  age: &apos;31&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;이유공&apos;,
+  alias: &apos;유공&apos;,
+  age: &apos;32&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;김성진&apos;,
+  alias: &apos;성진&apos;,
+  age: &apos;27&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;권우재&apos;,
+  alias: &apos;우재&apos;,
+  age: &apos;27&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;이은기&apos;,
+  alias: &apos;은기&apos;,
+  age: &apos;27&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;이준규&apos;,
+  alias: &apos;흰둥이&apos;,
+  age: &apos;31&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;박석현&apos;,
+  alias: &apos;석현이형&apos;,
+  age: &apos;37&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;황민구&apos;,
+  alias: &apos;민구형님&apos;,
+  age: &apos;38&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;윤지혁&apos;,
+  alias: &apos;윤지혁&apos;,
+  age: &apos;32&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;조한용&apos;,
+  alias: &apos;한용이&apos;,
+  age: &apos;26?&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;장성환&apos;,
+  alias: &apos;장성환&apos;,
+  age: &apos;32&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+},
+{
+  level: &apos;member&apos;,
+  name: &apos;김태주&apos;,
+  alias: &apos;태주&apos;,
+  age: &apos;24&apos;,
+  avility: {
+    수비: 0,
+    피지컬: 0,
+    스피드: 0,
+    창조력: 0,
+    공격: 0,
+    기술: 0,
+    제공권: 0,
+    정신: 0
+  },
+  img: &apos;src/assets/images/empty.png&apos;,
+  intro: &apos;하고싶은말&apos;,
+  contact: &apos;010-0000-0000&apos;
+}
+</code></pre><p>{<br>    “0”: {<br>      “author”: “gracehop”,<br>      “title”: “Announcing COBOL, a New Programming Language”<br>      “name”: “김대원”,<br>      “alias”: “원바”,<br>      “age”: 32,<br>      “avility”: {<br>        “수비”: 1.4,<br>        “피지컬”: 0.4,<br>        “스피드”: 0.9,<br>        “창조력”: 1.1,<br>        “공격”: 1,<br>        “기술”: 1,<br>        “제공권”: 0.2,<br>        “정신”: 0.5<br>      },<br>      “img”: “<a href="https://firebasestorage.googleapis.com/v0/b/fsa-project-60f97.appspot.com/o/wonba_slice.jpg?alt=media&amp;token=b2c0292b-7238-4ee3-8222-0a687f6aa6c8&quot;" target="_blank" rel="noopener">https://firebasestorage.googleapis.com/v0/b/fsa-project-60f97.appspot.com/o/wonba_slice.jpg?alt=media&amp;token=b2c0292b-7238-4ee3-8222-0a687f6aa6c8&quot;</a>,<br>      “intro”: “하고싶은 말 - 원래 바보”,<br>      “contact”: “010-0000-0000”<br>    },<br>    “1”: {<br>      “author”: “alanisawesome”,<br>      “title”: “The Turing Machine”<br>    }<br>}</p>
 
 
             <!-- Tags -->
