@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="google-site-verification" content="0csUmrnWzGjJHxGLCbpLsyMt0DB_sEo8fMmISVKEzlc">
+    <!--Description-->
+    
+        <meta name="description" content="Test Framework - Jest이번 내용은 리액트 테스트 프레임워크인 jest에 대해 설명하려고 합니다.
+필자는 우선 테스트라는 것은 전혀 생각도 하지 않았고, 몇년전 모임 스터디중 Jasmine(자스민)을아주 잠깐 맛보기로 써봤을 뿐이였습니다. 그당시 자스민을">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="shs400">
+    
+
+    <!--Keywords-->
+    
+        <meta name="keywords" content="javascript,blog,test,tdd,framework,jest,study">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Test FrameWork - Jest">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Roy Blog">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="">
+    
+
+    <!--autoCanonical-->
+    <link rel="canonical" href="http://shs400.github.io/2019/01/22/jest/">
+
+    <!-- Title -->
+    
+    <title>Test FrameWork - Jest - Roy Blog</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-131731182-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/img/roy_favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/roy_favicon.ico" type="image/x-icon">
+    
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Roy Blog</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/tags">tags</a>
+            </li>
+            
+            <li>
+                <a href="/about">about</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://twitter.com/shs4005" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/shs400" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+            
+            
+            
+                <li><a href="atom.xml" class="rss" target="_blank" data-title="RSS"></a></li>
+            
+            
+                <li><a href="https://www.instagram.com/shs400" class="instagram" target="_blank" data-title="Instagram"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2019 hsSIM.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/default_detail_cover_02.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/2019/01/23/enzyme/" class="previous" data-title="Test Utility - Enzyme"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2019/01/22/WebGL-8/" class="next" data-title="WebGL-8"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">Test FrameWork - Jest</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <!-- excerpt -->
+<h1 id="Test-Framework-Jest"><a href="#Test-Framework-Jest" class="headerlink" title="Test Framework - Jest"></a>Test Framework - Jest</h1><p>이번 내용은 리액트 테스트 프레임워크인 jest에 대해 설명하려고 합니다.</p>
+<p>필자는 우선 테스트라는 것은 전혀 생각도 하지 않았고, 몇년전 모임 스터디중 Jasmine(자스민)을<br>아주 잠깐 맛보기로 써봤을 뿐이였습니다. 그당시 자스민을 쓰면서도 이걸 언제 작성하고 할까.. 귀찮은데..<br>재미도없어.. 이런 마음이 컷기 때문에 맛보기 정도만 해보고 그대로 저의 기억속에서 잊혀졌습니다.</p>
+<p>그러다 최근 팀에 새로 입사하신분께서 jest에 대해 설명해주셨고, 유용함을 이제서야 느끼게 되어<br>이 글을 작성하게 되었습니다.</p>
+<p>그렇다면 왜 테스트를 해야하는가에 대해 먼저 얘기해 보겠습니다.</p>
+<h2 id="테스트-Why"><a href="#테스트-Why" class="headerlink" title="테스트.. Why?"></a>테스트.. Why?</h2><p>물론 저는 아직도 테스트를 반드시, 무조건 해야한다고 생각하지는 않습니다.<br>실무에 이미 도입되어있거나 혹은 도입하기위해 실무에 바로 써야하는 분들의 경우도 있을 것 이며,<br>아직 테스트코드에 대해 모르거나 예전의 저처럼 비관적으로 바라보는 경우도 있을 것 입니다.<br>왜냐하면 혼자하는 작업이거나 소규모 프로젝트라면 오히려 진행 속도를 늦출 수 있기 때문입니다.</p>
+<p>일단 장점과 단점을 설명하자면 아래와 같습니다.</p>
+<p><strong>장점</strong></p>
+<ol>
+<li>리팩토링할때 좋다.<ul>
+<li>리팩토링 후에도 해당 모듈이 의도대로 작동하고 있음을 유닛 테스트를 통해서 확신할 수 있는데, 이를 회귀 테스트(Regression testing)라 합니다.</li>
+</ul>
+</li>
+<li>협업시 좋다.<ul>
+<li>A의 코드와 B의 코드로 C 라는 기능을 구현 하는데, A를 수정한뒤에 A 코드의 정상 동작을 확인 하였는데, 갑자기 A에서 문제가 생겼다고 했을시 기존에 유닛 테스트를 했다면<br>A코드의 문제를 바로 발견하고 수정했을것입니다. 하지만 유닛코드를 작성하지 않았다면 어디서 버그가 나타났는지 찾기 힘들것입니다.     </li>
+</ul>
+</li>
+<li>그룹내에 공용으로 사용하여 테스트 코드를 늘릴 수 있다. ( 예외적인 상황 )<ul>
+<li>예를 들면 같은 개발팀 내에서 validation 관련 컴포넌트 &amp; 테스트 코드를 공유하며 하나하나씩 테스트 코드를 작성하다보면 테스트 코드가 공유되고 양도 늘어나 더욱 빠른 테스트 환경을 만들 수 있다.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>단점</strong></p>
+<ol>
+<li>시간이 걸린다.<ul>
+<li>테스트 코드 작성 및 러닝커브</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>이처럼 유닛테스트는 개발 시간을 증가 시키는것 처럼 보일 수 있습니다.<br>하지만 유닛테스트를 함으로써 개발 기간 중 대부분을 차지하는 디버깅 시간을 단축시킬수 있기 때문에 필수는 아니지만<br>할 수 있다면 작성 하며 개발 하는 것을 개인적으로는 추천합니다.</p>
+<p>*필자는 그전에 개발을 하였을 때 테스트 없이 개발 하였고, 리팩토링하거나 코드 수정시 기존의 기능들이 제대로 동작하는지 하나하나 확인 했었는데,<br>테스트 코드를 작성함으로써 테스트만 돌리면 따로 확인작업을 하지않아도 된다는 것이 매력적으로 다가왔습니다.<br>물론 테스트 코드가 100%를 테스트 해주진 않겠지만 ( 테스트 코드 작성에 따라 다름으로 ) 어느정도 커버해준다는 것만 으로도 큰 매력이 있다고 생각합니다. </p>
+<p>다음으로 이제 jest에 대해 설명하도록 하겠습니다.<br>(필자는 react를 사용하며 react에 최적화되어있는 test framework인 jest에 대해 알아보려고 합니다.)</p>
+<h2 id="Jest란"><a href="#Jest란" class="headerlink" title="Jest란?"></a>Jest란?</h2><p>Jest는 페이스북에서 만든 테스트 프레임워크입니다.<br>React를 포함한 모든 자바스크립트 코드를 테스트하는데 사용될 수 있습니다.<br>Jest의 철학중 “Zero-Configuration”이 있는데, 이는 아래와 같이 설정 없는 테스트 환경을 제공한다고 합니다.<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev jset // jest 설치</span><br><span class="line">npm run jest // jest 시작</span><br></pre></td></tr></table></figure></p>
+<p>이렇게 간단하게 설치와 테스트를 할 수 있습니다.<br>물론 테스트 코드를 작성하는것은 별개의 작업이지만 따로 설정이 필요없이 설치만 하면 테스트를 할수 있는 환경이 이루어집니다.</p>
+<p>이렇게 Jest를 사용하여 저희는 <strong><a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%9B_%ED%85%8C%EC%8A%A4%ED%8A%B8" target="_blank" rel="noopener">Unit Test(단위 테스트)</a></strong>를 해보려고 합니다.</p>
+<h2 id="Unit-Test-단위-테스트-란"><a href="#Unit-Test-단위-테스트-란" class="headerlink" title="Unit Test(단위 테스트)란?"></a>Unit Test(단위 테스트)란?</h2><p><strong>Unit Test</strong>란, 소프트웨어를 최소한의 단위로 쪼개서 아주 작은 단위로 테스트 하는 것 을 말합니다.<br>예를 들자면 React에 A라는 Counter 컴포넌트가 있다면, A컴포넌트의 카운트 증가 함수를 테스트 하거나 카운트 감소 함수를 테스트 하는 것을 말합니다.</p>
+<h2 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h2><p>기본적으로 React는 사용 하실줄 안다는 것을 가정하여 설명하도록 하겠습니다.<br>( 아래와 같이 Counter.jsx 컴포넌트 코드와 Counter.test.jsx 컴포넌트 테스트 코드를 먼저 작성합니다. )</p>
+<p>Counter.jsx<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Counter</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      value: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  onIncrease = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(<span class="function">(<span class="params">&#123;value&#125;</span>) =&gt;</span> (&#123; <span class="attr">value</span>: value + <span class="number">1</span> &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  onDecrease = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(<span class="function">(<span class="params">&#123;value&#125;</span>) =&gt;</span> (&#123; <span class="attr">value</span>: value &lt;= <span class="number">0</span> ? value : value - <span class="number">1</span> &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = <span class="keyword">this</span>.state;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;카운터 예제&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &lt;h2&gt;&#123;value&#125;&lt;/</span>h2&gt;</span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.onIncrease&#125;&gt;+<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.onDecrease&#125;&gt;-<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default Counter;</span></span><br></pre></td></tr></table></figure></p>
+<p>Counter.test.jsx<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">'react-test-renderer'</span>;</span><br><span class="line"><span class="keyword">import</span> Counter <span class="keyword">from</span> <span class="string">'./index'</span>;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'Counter'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> component = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">  it(<span class="string">'renders correctly'</span>, () =&gt; &#123;</span><br><span class="line">    component = renderer.create(<span class="xml"><span class="tag">&lt;<span class="name">Counter</span> /&gt;</span>);</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  it('matches snapshot', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    const tree = component.toJSON();</span></span><br><span class="line"><span class="xml">    expect(tree).toMatchSnapshot();</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  //increase 동작 확인</span></span><br><span class="line"><span class="xml">  it('increases correctly', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    component.getInstance().onIncrease();</span></span><br><span class="line"><span class="xml">    expect(component.getInstance().state.value).toBe(2); // value 값이 2인지 확인</span></span><br><span class="line"><span class="xml">    const tree = component.toJSON(); // re-render</span></span><br><span class="line"><span class="xml">    expect(tree).toMatchSnapshot(); // 스냅샷을 비교합니다.</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  // decrease 동작 확인</span></span><br><span class="line"><span class="xml">  it('decreases correctly', () =&gt; &#123;</span></span><br><span class="line"><span class="xml">    component.getInstance().onDecrease();</span></span><br><span class="line"><span class="xml">    expect(component.getInstance().state.value).toBe(1); // value 값이 1인지 확인</span></span><br><span class="line"><span class="xml">    const tree = component.toJSON(); // re-render</span></span><br><span class="line"><span class="xml">    expect(tree).toMatchSnapshot(); // 스냅샷을 비교합니다.</span></span><br><span class="line"><span class="xml">  &#125;);</span></span><br><span class="line"><span class="xml">&#125;);</span></span><br></pre></td></tr></table></figure></p>
+<p>중요한 것은 Counter.test.jsx 입니다. Counter.test.jsx 코드를 보시면<br>renderer, describe, it, expect등 처음 보는 메서드 들이 있을 것입니다.</p>
+<p>describe와 it은 jest에서 제공되는 함수입니다.<br>describe는 테스트 묶음을 정의하고, it은 테스트 케이스를 정의 합니다.<br>( Counter.test.jsx 테스트 묶음(Suite)은 4개의 테스트를 가지고 있습니다. )</p>
+<p>expect도 jest에서 제공하는 함수로 테스트값과 예상값이 일치하는지 여부를 판단합니다.<br>일치여부 뿐만 아니라 다른 비교도 할 수 있는데 <a href="https://jestjs.io/docs/en/expect.html" target="_blank" rel="noopener">Jest - Expect</a>에서 확인할 수 있습니다.</p>
+<p>그리고 describe 와 it 에서 첫번째 파라미터는 해당 작업의 설명을 넣어주게 되는데,<br>describe 에서는 어떤 기능을 확인하는지, 그리고 it 부분에선 무엇을 검사해야 되는지에 대한 설명을 넣으시면 됩니다.</p>
+<p>renderer는 스냅샷 테스트를 위해 사용되는 함수입니다. renderer를 사용하기위해서는 먼저 react-test-renderer 를 설치해 주어야합니다.<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev react-test-renderer</span><br></pre></td></tr></table></figure></p>
+<p>react-test-renderer의 create() 함수는 인자로 리액트 컴포넌트를 받아 렌더링합니다.<br>이후 toMatchSnapshot() matcher를 통해 렌더링된 컴포넌트를 스냅샷과 비교할 수 있습니다.</p>
+<h2 id="SnapShot-스냅샷-테스트란"><a href="#SnapShot-스냅샷-테스트란" class="headerlink" title="SnapShot(스냅샷) 테스트란?"></a>SnapShot(스냅샷) 테스트란?</h2><p>결과값을 파일로 저장해서 테스트할 때마다 테스트 결과값을 파일의 결과값과 비교합니다.<br>비교해서 다를때 개발자가 수정을 한 코드이면 업데이트를 하면되고( npm run jest – -u ),<br>의도하지 않은 코드라면 버그라고 판단하고 코드를 수정하면 될 것 입니다.</p>
+<p>위의 Counter.test.jsx 테스트를 실행하면<br><img src="/images/jest/jest_img01.png#left" alt="snapshot"><br>이렇게 해당 테스트 코드 위치에 snapshots 폴더가 생기고 스냅샷 결과값은 아래와 같이 나오게된다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">exports[<span class="string">`Counter decreases correctly 1`</span>] = <span class="string">`</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">  &lt;h1&gt;</span></span><br><span class="line"><span class="string">    카운터</span></span><br><span class="line"><span class="string">  &lt;/h1&gt;</span></span><br><span class="line"><span class="string">  &lt;h2&gt;</span></span><br><span class="line"><span class="string">    1</span></span><br><span class="line"><span class="string">  &lt;/h2&gt;</span></span><br><span class="line"><span class="string">  &lt;button</span></span><br><span class="line"><span class="string">    onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="string">  &gt;</span></span><br><span class="line"><span class="string">    +</span></span><br><span class="line"><span class="string">  &lt;/button&gt;</span></span><br><span class="line"><span class="string">  &lt;button</span></span><br><span class="line"><span class="string">    onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="string">  &gt;</span></span><br><span class="line"><span class="string">    -</span></span><br><span class="line"><span class="string">  &lt;/button&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line">exports[<span class="string">`Counter increases correctly 1`</span>] = <span class="string">`</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">  &lt;h1&gt;</span></span><br><span class="line"><span class="string">    카운터</span></span><br><span class="line"><span class="string">  &lt;/h1&gt;</span></span><br><span class="line"><span class="string">  &lt;h2&gt;</span></span><br><span class="line"><span class="string">    2</span></span><br><span class="line"><span class="string">  &lt;/h2&gt;</span></span><br><span class="line"><span class="string">  &lt;button</span></span><br><span class="line"><span class="string">    onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="string">  &gt;</span></span><br><span class="line"><span class="string">    +</span></span><br><span class="line"><span class="string">  &lt;/button&gt;</span></span><br><span class="line"><span class="string">  &lt;button</span></span><br><span class="line"><span class="string">    onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="string">  &gt;</span></span><br><span class="line"><span class="string">    -</span></span><br><span class="line"><span class="string">  &lt;/button&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line">exports[<span class="string">`Counter matches snapshot 1`</span>] = <span class="string">`</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">  &lt;h1&gt;</span></span><br><span class="line"><span class="string">    카운터</span></span><br><span class="line"><span class="string">  &lt;/h1&gt;</span></span><br><span class="line"><span class="string">  &lt;h2&gt;</span></span><br><span class="line"><span class="string">    1</span></span><br><span class="line"><span class="string">  &lt;/h2&gt;</span></span><br><span class="line"><span class="string">  &lt;button</span></span><br><span class="line"><span class="string">    onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="string">  &gt;</span></span><br><span class="line"><span class="string">    +</span></span><br><span class="line"><span class="string">  &lt;/button&gt;</span></span><br><span class="line"><span class="string">  &lt;button</span></span><br><span class="line"><span class="string">    onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="string">  &gt;</span></span><br><span class="line"><span class="string">    -</span></span><br><span class="line"><span class="string">  &lt;/button&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure></p>
+<p>이렇게 작성된 스냅샷과 현재 코드와 비교하여 달라진 곳이 있는지 테스트 하게 되는 것 입니다.</p>
+<p>지금까지 설명한데로 진행하게되면, 터미널에는 아래와 같은 메세지가 출력될 것입니다.<br><img src="/images/jest/jest_img02.png#left" alt="jset_test"></p>
+<p>이를 바탕으로 더 많은 테스트 코드를 작성하여 안정성있는 코드를 작성하실 수 있길 바랍니다.</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/blog/">blog</a> <a href="/tags/javascript/">javascript</a> <a href="/tags/test/">test</a> <a href="/tags/tdd/">tdd</a> <a href="/tags/framework/">framework</a> <a href="/tags/jest/">jest</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr>
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'shs400';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>

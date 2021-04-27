@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="google-site-verification" content="0csUmrnWzGjJHxGLCbpLsyMt0DB_sEo8fMmISVKEzlc">
+    <!--Description-->
+    
+        <meta name="description" content="Immutable JS저희가 사용하는 React와 Redux에서는 immutablity(불변성)를 항상 강조하고 있습니다.Immutable JS에 대해 설명하기전에 immutablity(불변성)에 대해 설명을 하고 넘어가겠습니다.
+immutablity란?불변성 - 말 ">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="shs400">
+    
+
+    <!--Keywords-->
+    
+        <meta name="keywords" content="javascript,blog,study,immutable">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="immutable">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Roy Blog">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="">
+    
+
+    <!--autoCanonical-->
+    <link rel="canonical" href="http://shs400.github.io/2019/01/29/immutable/">
+
+    <!-- Title -->
+    
+    <title>immutable - Roy Blog</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-131731182-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/img/roy_favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/roy_favicon.ico" type="image/x-icon">
+    
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Roy Blog</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/tags">tags</a>
+            </li>
+            
+            <li>
+                <a href="/about">about</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://twitter.com/shs4005" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/shs400" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+            
+            
+            
+                <li><a href="atom.xml" class="rss" target="_blank" data-title="RSS"></a></li>
+            
+            
+                <li><a href="https://www.instagram.com/shs400" class="instagram" target="_blank" data-title="Instagram"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2019 hsSIM.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/default_detail_cover_02.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/2019/01/31/immer/" class="previous" data-title="immer"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2019/01/23/enzyme/" class="next" data-title="Test Utility - En..."></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">immutable</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <!-- excerpt -->
+<h1 id="Immutable-JS"><a href="#Immutable-JS" class="headerlink" title="Immutable JS"></a>Immutable JS</h1><p>저희가 사용하는 React와 Redux에서는 immutablity(불변성)를 항상 강조하고 있습니다.<br>Immutable JS에 대해 설명하기전에 immutablity(불변성)에 대해 설명을 하고 넘어가겠습니다.</p>
+<h2 id="immutablity란"><a href="#immutablity란" class="headerlink" title="immutablity란?"></a>immutablity란?</h2><p>불변성 - 말 그대로 변하지 않는다는 것 입니다.<br>※ 우선 리액트 코드를 예를 들어 불변성에 대해 설명하고, Immutable JS 가 필요한 이유에 대해 설명하겠습니다.</p>
+<p>React는 state의 불변성을 유지해야 한다고 합니다. 그렇기 때문에<br>state를 변경할때는 필수로 setState를 사용하여 업데이트를 해야하고,<br>state 객체 값을 <strong>직접 수정하면 안됩니다.</strong> </p>
+<p>코드로 보자면<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.state = &#123;</span><br><span class="line">  userList: [</span><br><span class="line">    &#123; </span><br><span class="line">      name: <span class="string">'sim'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; </span><br><span class="line">      name: <span class="string">'park'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>리액트 state에 userList라는 배열이 있고, 그 배열에 name: ‘kim’을 추가하거나<br>기존 userList를 수정한다 했을 때 아래와 같이 수정을 하는분들도 있을 것 입니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.state.userList.push(&#123; <span class="attr">name</span>: <span class="string">'kim'</span> &#125;);</span><br><span class="line">or</span><br><span class="line"><span class="keyword">this</span>.state.userList[<span class="number">0</span>].name = <span class="string">'lee'</span>;</span><br></pre></td></tr></table></figure>
+<p>리액트를 사용하신다면 절대 위와 같이 사용하면 안됩니다.<br>리액트는 상태가 변할때 리렌더링이 되고, 리렌더링은 setState를 통해서 동작하도록 되어있습니다.<br>그렇기 때문에 아래 코드와 같이 수정해주어야 합니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">  name: <span class="string">'kim'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>위와 같이 setState를 이용하여 코드 작성시<br>리액트의 기본속성중의 하나인 부모 컴포넌트가 리렌더링 되면, 자식컴포넌트도 리렌더링 되는 현상을 보실 수 있을겁니다.<br>그 과정은 가상 DOM에서만 이뤄지는 렌더링이고, 렌더링 후에 리액트의 diffing알고리즘을 통하여 변화가 일어나는 부분만 실제로 업데이트 해준다고 합니다.</p>
+<p>Ex)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ItemList <span class="keyword">from</span> <span class="string">"./item"</span>;</span><br><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserList</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> propTypes = &#123;</span><br><span class="line">    users: PropTypes.array,</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;</span><br><span class="line">    users: [],</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  renderList() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; users &#125; = <span class="keyword">this</span>.props;</span><br><span class="line">    <span class="keyword">return</span> users.map(<span class="function">(<span class="params">user</span>) =&gt;</span> &lt;ItemList key=&#123;<span class="string">`<span class="subst">$&#123;user.id&#125;</span>_key`</span>&#125; user=&#123;user&#125; /&gt;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'users List 렌더됨 : '</span>,<span class="keyword">this</span>.props.users)</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">        &#123; <span class="keyword">this</span>.renderList() &#125;</span><br><span class="line">      &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default UserList;</span></span><br></pre></td></tr></table></figure></p>
+<p>해당 코드는 유저 리스트 화면을 렌더링해주는 코드입니다.<br>처음 렌더링이 될때 유저의 정보를 받고 해당 텍스트를 console에 출력합니다.<br><img src="/images/immutable/immutable01.png#left" alt="immutable"></p>
+<p>문제는 부모컴포넌트에서 추가로 userList를 입력했을시 setState를 통해 상태를 변경해주면, 부모컨테이너가 리렌더링 되면서 자식 컴포넌트인 UserList 컴포넌트도 리렌더링 되게됩니다.<br>만약 부모 컴포넌트에서 입력해주는 input이 변경될때마다 setState를 변경시켰다면, 부모 컨테이너는 물론 UserList컨테이너 까지 리렌더링이되어 아래와 같은 문제가 나타나게 됩니다.<br><img src="/images/immutable/immutable02.png#left" alt="immutable"></p>
+<p>실제 UserList는 변경되지 않았는데, 계속해서 리렌더링되고 있습니다. 실제 DOM에 반영되지 않는다 하더라도<br>미세하게 CPU 낭비가 존재 할 것이며, 이런 낭비를 없애기 위해 shouldComponentUpdate 라이프 사이클 훅을 작성합니다.<br>불변함을 유지하면서 코드를 짯기 때문에 아주 쉽게 코드를 작성할 수 있을 것입니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shouldComponentUpdate(nextProps, nextState) &#123;</span><br><span class="line">  <span class="keyword">return</span> nextProps.users !== <span class="keyword">this</span>.props.users;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>UserList 컴포넌트에 shouldComponentUpdate 라이프 사이클 훅에, 전달받은 props를 비교하여, Boolean 값을 리턴 해줌으로써<br>리렌더링을 할것인지 말것인지 판단하도록 해주게 됩니다.</p>
+<p>드디어 immutable JS에 관해 설명을 하도록 하겠습니다.</p>
+<p>이렇게 위의 내용처럼 최적화를 위해 불변성을 유지시켜 코드를 작성하다보면 복잡한 상태가 있을 수도 있습니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.state = &#123;</span><br><span class="line">  userList: [</span><br><span class="line">    &#123; </span><br><span class="line">      id: <span class="number">01</span>,</span><br><span class="line">      name: <span class="string">'sim'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; </span><br><span class="line">      id: <span class="number">02</span>,</span><br><span class="line">      name: <span class="string">'park'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>이런 상태의 객체에서 불변성을을 유지하면서 userList 배열의 2번째 객체 이름을 변경하려면,<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; userList &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"><span class="keyword">const</span> copyUser = [ ...userList ]; </span><br><span class="line"><span class="comment">// copyUser라는 변수에 spread 연산자를 통해 값을 복사해 넣습니다.</span></span><br><span class="line">copyUser[<span class="number">1</span>] = &#123;</span><br><span class="line">  ...userList[<span class="number">1</span>],</span><br><span class="line">  name: <span class="string">'lee'</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">  userList: copyUser</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>이렇게 userList의 2번째 객체이름을 변경해주면 불변성을 유지하면서 변경해줄 수 있습니다.<br>하지만 이런 구조가 더 깊은 구조로 되어있다면… 아래 내용처럼 해주어야합니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.state = &#123;</span><br><span class="line">  userList: &#123;</span><br><span class="line">    id: &#123;</span><br><span class="line">      idx: <span class="number">1</span>,</span><br><span class="line">      userName: &#123;</span><br><span class="line">        name: <span class="string">'sim'</span>,</span><br><span class="line">        friendsName: <span class="string">'park'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>위 코드를 불변성을 유지하며 변경하려면..<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; userList &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"><span class="keyword">const</span> copyData = &#123; ...userList &#125;; </span><br><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">  userList: &#123;</span><br><span class="line">    ...copyData</span><br><span class="line">    id: &#123;</span><br><span class="line">      ...copyData.id</span><br><span class="line">      userName: &#123;</span><br><span class="line">        ...copyData.id.userName.name,</span><br><span class="line">        friends: <span class="string">'lee'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>이런식으로 spread 연산자가 반복적으로 사용되게 됩니다.<br>이렇게 번거롭고 복잡한 작업이 있을때 사용되는것이<br><strong>Immutable JS</strong> 입니다.</p>
+<p>우선 immutable은 규칙이 있습니다.</p>
+<ol>
+<li>List - 배열</li>
+<li>Map - 객체</li>
+<li>set - 설정</li>
+<li>get - 불러오기(읽기)</li>
+<li>update - 불러오고 업데이트 시</li>
+<li>List에 배열의 내장함수와 비슷한 함수들 존재 ( push, slice, filter 등 <a href="https://facebook.github.io/immutable-js/docs/#/List" target="_blank" rel="noopener">공식 사이트 문서 List() 참조</a> )</li>
+<li>toJS - 일반 javascript 로 변환</li>
+<li>setIn, getIn, updateIn - 깊은 구조의 객체의 값을 set, get, update 할때 </li>
+<li>delete - key를 지울때 </li>
+</ol>
+<hr>
+<p>이렇게 여러가지 규칙이 있습니다.<br>자세한 내용은 <a href="https://facebook.github.io/immutable-js/" target="_blank" rel="noopener">공식 사이트 문서 참조</a>하시길 바랍니다.</p>
+<p>위의 규칙들을 사용해 객체의 구조에 적용해 본다면<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.state = &#123;</span><br><span class="line">  userList: <span class="built_in">Map</span>(&#123;</span><br><span class="line">    users: List([</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">'sim'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">'park'</span></span><br><span class="line">      &#125;</span><br><span class="line">    ])</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>이렇게 적용이 가능하게 됩니다. immutable로 감싼 state는 사용시에도 규칙을 따르는데,<br>input에 텍스트 입력 후 버튼 클릭하는 함수에 코드를 작성해보면</p>
+<pre><code class="javascript">onButtonClick = <span class="function"><span class="params">()</span> =&gt;</span> {
+  <span class="keyword">const</span> { userList } = <span class="keyword">this</span>.state;
+
+  <span class="keyword">this</span>.setState({
+    userList: userList.update(<span class="string">'users'</span>, users =&gt; users.push(<span class="built_in">Map</span>({
+      name: <span class="string">'lee'</span> <span class="comment">// 입력을 lee로 했다고 가정함.</span>
+    })))
+  });
+}
+</code></pre>
+<p>위와 같이 작성할 수 있습니다.</p>
+<p>immutable을 왜 사용해야 하는지 필요성을 못느낄 수 도 있겠지만,<br>필자의 경우는 코드의 가독성을 위해서 위와 같은 상황에서는 사용하는 것을 추천합니다.</p>
+<p>.get(), getIn()을 계속 하는게 싫다면 Record를 사용하면 좀 더 편리하게 사용할 수 있다고 합니다.<br>하지만 저는 Record는 따로 설명하지 않으려고 합니다.<br>그 이유는 다음 포스트로 작성할 Immer JS는 Immutable JS 대신 사용하는 라이브러리 인데<br>사용하게되면 Record 를 사용하는것과 다를것이 없다고 생각되어 Record 설명은 생략하도록 하겠습니다.</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/blog/">blog</a> <a href="/tags/javascript/">javascript</a> <a href="/tags/study/">study</a> <a href="/tags/immutable/">immutable</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr>
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'shs400';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>

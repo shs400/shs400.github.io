@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="google-site-verification" content="0csUmrnWzGjJHxGLCbpLsyMt0DB_sEo8fMmISVKEzlc">
+    <!--Description-->
+    
+        <meta name="description" content="Immer JS이번 포스트에서는 Immutable JS 포스트에서 언급하였던 Immer JS에 대해 설명하려고 합니다.
+Immutable JS 포스트에서 설명드린 불변성을 유지하려할때, spread 연산자보다 가독성을 좋게 하기위해immutableJS를 사용한다고 설명">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="shs400">
+    
+
+    <!--Keywords-->
+    
+        <meta name="keywords" content="javascript,blog,study,immutablity,immer">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="immer">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Roy Blog">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="">
+    
+
+    <!--autoCanonical-->
+    <link rel="canonical" href="http://shs400.github.io/2019/01/31/immer/">
+
+    <!-- Title -->
+    
+    <title>immer - Roy Blog</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-131731182-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/img/roy_favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/roy_favicon.ico" type="image/x-icon">
+    
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Roy Blog</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/tags">tags</a>
+            </li>
+            
+            <li>
+                <a href="/about">about</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://twitter.com/shs4005" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/shs400" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+            
+            
+            
+                <li><a href="atom.xml" class="rss" target="_blank" data-title="RSS"></a></li>
+            
+            
+                <li><a href="https://www.instagram.com/shs400" class="instagram" target="_blank" data-title="Instagram"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2019 hsSIM.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/default_detail_cover_02.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/2019/03/11/WebGL-9/" class="previous" data-title="WebGL-9"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2019/01/29/immutable/" class="next" data-title="immutable"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">immer</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <!-- excerpt -->
+<h1 id="Immer-JS"><a href="#Immer-JS" class="headerlink" title="Immer JS"></a>Immer JS</h1><p>이번 포스트에서는 <a href="/2019/01/29/immutable/">Immutable JS</a> 포스트에서 언급하였던 Immer JS에 대해 설명하려고 합니다.</p>
+<p><a href="/2019/01/29/immutable/">Immutable JS</a> 포스트에서 설명드린 불변성을 유지하려할때, spread 연산자보다 가독성을 좋게 하기위해<br>immutableJS를 사용한다고 설명 하였는데, immutableJS의 가독성도 spread에 비해 뛰어나게 좋은 정도는 아니고, 사용하기가 그닥 편리하지는 않습니다.( 필자의 생각 )</p>
+<p>그러나 Immer JS를 사용하면 가독성이 좋아지고 편리하게 사용할 수 있습니다.<br>코드를 통해서 비교해보도록 하겠습니다.<br>아래와 같이 reducer를 통하여 불변성을 유지하며 state를 변경할때<br>immutable JS를 사용하면 아래와 같은 코드로 작성할 수 있고,<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> counterInitState = <span class="built_in">Map</span>(&#123;</span><br><span class="line">  value: <span class="number">0</span>,</span><br><span class="line">  diff: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> counter = <span class="function">(<span class="params"> state = counterInitState, action</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">switch</span>(action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> Types.INCREMEMT:</span><br><span class="line">      <span class="keyword">return</span> state.update(<span class="string">'value'</span>, () =&gt; state.get(<span class="string">'value'</span>) + state.get(<span class="string">'diff'</span>));</span><br><span class="line">    <span class="keyword">case</span> Types.DECREMENT:</span><br><span class="line">      <span class="keyword">const</span> minDecrement = state.get(<span class="string">'value'</span>) &lt;= <span class="number">0</span> ? state.get(<span class="string">'value'</span>) : state.get(<span class="string">'value'</span>) - state.get(<span class="string">'diff'</span>);</span><br><span class="line">      <span class="keyword">return</span> state.update(<span class="string">'value'</span>, () =&gt; minDecrement);</span><br><span class="line">    <span class="keyword">case</span> Types.SET_DIFF:</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Object</span>.assign(&#123;&#125;, state, &#123;</span><br><span class="line">        diff: action.diff</span><br><span class="line">      &#125;);</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">~~~  </span><br><span class="line"></span><br><span class="line">Immer JS를 사용하면 아래와 같은 코드로 작성 할 수 있습니다. </span><br><span class="line">~~~javascript</span><br><span class="line"><span class="keyword">const</span> counterInitState = &#123;</span><br><span class="line">  value: <span class="number">0</span>,</span><br><span class="line">  diff: <span class="number">1</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> counter = produce(<span class="function">(<span class="params">draft, action</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">switch</span>(action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> Types.INCREMEMT:</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        value: draft.value + draft.diff,</span><br><span class="line">        diff: draft.diff</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="keyword">case</span> Types.DECREMENT:</span><br><span class="line">      <span class="keyword">const</span> minDecrement = draft.value &lt;= <span class="number">0</span> ? draft.value : draft.value - draft.diff;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        value: minDecrement,</span><br><span class="line">        diff: draft.diff</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="keyword">case</span> Types.SET_DIFF:</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        value: draft.value,</span><br><span class="line">        diff: draft.diff</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">return</span> draft;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, counterInitState);</span><br></pre></td></tr></table></figure></p>
+<p>여러분이 보시기에는 어느 코드가 저 보기편하고 작서하기 쉬운 코드일것 같나요?<br>필자의 생각으로는 ImmerJS를 사용한 코드가 가독성도 뛰어나고 코드작성시 편리하다고 생각합니다.<br>get을 사용하지 않고 .으로 접근할수 있는것 많으로도 많은 차이가 느껴지고 불변객체에 메서드를 랩핑해주지 않아도 되는 편리합니 있습니다.</p>
+<p><a href="https://github.com/mweststrate/immer" target="_blank" rel="noopener">immerJS 공식 사이트</a>에서는 immer를 이렇게 설명합니다.</p>
+<p><img src="/images/immer/immer01.png" alt="immer"><br>이미지 출처 : [<a href="https://github.com/mweststrate/immer]" target="_blank" rel="noopener">https://github.com/mweststrate/immer]</a></p>
+<hr>
+<p>immer를 사용하는것은 개인 비서를 갖는 것과 같습니다.<br>immer는 state를 받아서 draft라는 이전 state를 복사하고, 복사한 draft를 변경한뒤 state에 적용하면서 바꿔치기 하게됩니다.</p>
+<p>쉽게 설명하면</p>
+<ol>
+<li>작가가 글은 쓰고,</li>
+<li>작가의 글을 비서가 복사해 사본을 만들고 맞춤법등 변경될 부분을 수정한다.</li>
+<li>마지막으로 비서가 수정한 글을 출판사에 제출한다.</li>
+</ol>
+<hr>
+<p>이렇게 동작을 설명 할 수 있습니다.</p>
+<p>이렇게 immutable, immer에 대해 설명하였으나, 결론적으로는<br>spread 연산자를 사용하던 immutable을 사용하던 아니면 immer를 사용하던, 선택은 사용하는 개발자의 몫이며<br>본인이 더 편리한 라이브러리를 사용하시길 바랍니다. </p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/blog/">blog</a> <a href="/tags/javascript/">javascript</a> <a href="/tags/study/">study</a> <a href="/tags/immutablity/">immutablity</a> <a href="/tags/immer/">immer</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr>
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'shs400';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>
