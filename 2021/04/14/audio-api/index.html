@@ -11,7 +11,7 @@
     <!--Description-->
     
         <meta name="description" content="WebAudio API를 이용하여 소리를 시각화HTML5에서는 audio가 출력이되기전에 데이터를 가로채서 활용을 할 수 있습니다.아래와 같이 input과 output 중간에서 AnalyserNode를 이용하여 data를 가로챌 수 있게 됩니다.
-이미지 출처 : [ht">
+이미지 출처 : htt">
     
 
     <!--Author-->
@@ -175,9 +175,9 @@
             <!-- Content -->
             <!-- excerpt -->
 <h1 id="WebAudio-API를-이용하여-소리를-시각화"><a href="#WebAudio-API를-이용하여-소리를-시각화" class="headerlink" title="WebAudio API를 이용하여 소리를 시각화"></a>WebAudio API를 이용하여 소리를 시각화</h1><p>HTML5에서는 audio가 출력이되기전에 데이터를 가로채서 활용을 할 수 있습니다.<br>아래와 같이 input과 output 중간에서 AnalyserNode를 이용하여 data를 가로챌 수 있게 됩니다.</p>
-<p><img src="/images/audio/audio_img01.png#left" alt="audioAnalyser"><br>이미지 출처 : [<a href="https://developer.mozilla.org/ko/docs/Web/API/AnalyserNode]" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/API/AnalyserNode]</a></p>
-<p>AuidoContext의 createAnalyser 메소드를 사용하여, 주파수를 시각화 할 수 있는 AnalyserNode를 만들어줍니다.<br>AnalyserNode를 만들고 requestAnimationFrame을 사용하여 주파수 데이터를 반복적으로 수집할 수 있습니다.</p>
-<p>우선 오디오를 시각화 하기 위해서 필요한 AnalyserNode와 GainNode에 대해 알아보겠습니다.</p>
+<p><img src="/images/audio/audio_img01.png#left" alt="audioAnalyser"><br>이미지 출처 : <a href="https://developer.mozilla.org/ko/docs/Web/API/AnalyserNode" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/API/AnalyserNode</a></p>
+<p>AnalyserNode는 AuidoContext의 createAnalyser 메소드를 사용하여, 주파수를 시각화 할 수 있는 AnalyserNode를 만들어줍니다.</p>
+<p>우선 오디오를 시각화 하기 위해서는 AnalyserNode와 GainNode이 필요합니다.<br>필요한 AnalyserNode와 GainNode에 대해 알아보겠습니다.</p>
 <h2 id="AnalyserNode"><a href="#AnalyserNode" class="headerlink" title="AnalyserNode"></a>AnalyserNode</h2><ul>
 <li>시간대 별로 실시간 주파수의 정보를 표현합니다.</li>
 <li>하나의 입력에 하나의 출력을 가지고, 출력이 명시되지 않아도 동작에 이상이 없습니다.</li>
@@ -229,7 +229,15 @@
 <ul>
 <li><p>getByteFrequencyData는 현재의 <code>주파수</code> 데이터를 복사합니다.</p>
 </li>
-<li><p>ex) [0,0,0,0,0] -&gt; [255,255,255,0,0]</p>
+<li><p>주파수 데이터는 0에서 255까지의 정수로 구성됩니다.</p>
+</li>
+<li><p>배열의 각 항목은 특정 주파수에 대한 데시벨 값을 나타냅니다.</p>
+</li>
+<li><p>주파수는 샘플 속도의 0에서 1/2까지 분산됩니다.</p>
+</li>
+<li><p>ex) [ 0, 0, 0, 0, 0 ] -&gt; [ 255, 255, 255, 0, 0 ]</p>
+</li>
+<li><p>ex) 0번째 요소 주파수 = ( n x samplerate ( 기본 44100Hz ) / fftsize) / 2</p>
 </li>
 </ul>
 </li>
@@ -237,7 +245,7 @@
 <ul>
 <li><p>getByteTimeDomainData는 현재의 <code>파형</code> 테이터를 복사합니다.</p>
 </li>
-<li><p>ex) [127,127,127,127,127] -&gt; [200,100,222,127,127]</p>
+<li><p>ex) [ 127, 127, 127, 127, 127 ] -&gt; [ 200, 100, 222, 127, 127 ]</p>
 </li>
 </ul>
 </li>
@@ -260,7 +268,7 @@
 <li>StereoPannerNode</li>
 <li>WaveShaperNode</li>
 </ul>
-<h2 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> audioContext = <span class="keyword">new</span> AudioContext();</span><br><span class="line"><span class="keyword">const</span> analyser = audioContext.createAnalyser();</span><br><span class="line"><span class="keyword">const</span> gainNode = audioContext.createGain();</span><br><span class="line"></span><br><span class="line"><span class="comment">// mediaStream 사용시 createMediaStreamSource</span></span><br><span class="line"><span class="keyword">const</span> source = audioContext.createMediaStreamSource(MediaStream);</span><br><span class="line"><span class="comment">// audio tag의 mp3 파일이라면 createMediaElementSource</span></span><br><span class="line"><span class="keyword">const</span> audioSource = audioContext.createMediaElementSource(audioElm);</span><br><span class="line"></span><br><span class="line">source.connect(gainNode);</span><br><span class="line">source.connect(analyser);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> dataArray = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>(analyser.frequencyBinCount);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
+<h2 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> audioContext = <span class="keyword">new</span> AudioContext();</span><br><span class="line"><span class="keyword">const</span> analyser = audioContext.createAnalyser();</span><br><span class="line"><span class="keyword">const</span> gainNode = audioContext.createGain();</span><br><span class="line"></span><br><span class="line"><span class="comment">// mediaStream 사용시 createMediaStreamSource</span></span><br><span class="line"><span class="keyword">const</span> source = audioContext.createMediaStreamSource(MediaStream);</span><br><span class="line"><span class="comment">// audio tag의 mp3 파일이라면 createMediaElementSource</span></span><br><span class="line"><span class="keyword">const</span> audioSource = audioContext.createMediaElementSource(audioElm);</span><br><span class="line"></span><br><span class="line">source.connect(gainNode);</span><br><span class="line">source.connect(analyser);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 만약 오디오 출력을 하고싶다면 auidoNode에 해당 audioContext의 destination을 연결</span></span><br><span class="line">source.connect(<span class="keyword">this</span>.audioContext.destination);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> dataArray = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>(analyser.frequencyBinCount);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
 <ol>
 <li><p>audioContext를 생성한 후</p>
 </li>
