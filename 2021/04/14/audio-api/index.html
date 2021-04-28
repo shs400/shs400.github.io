@@ -175,7 +175,7 @@
             <!-- Content -->
             <!-- excerpt -->
 <h1 id="WebAudio-API를-이용하여-소리를-시각화"><a href="#WebAudio-API를-이용하여-소리를-시각화" class="headerlink" title="WebAudio API를 이용하여 소리를 시각화"></a>WebAudio API를 이용하여 소리를 시각화</h1><p>HTML5에서는 audio가 출력이되기전에 데이터를 가로채서 활용을 할 수 있습니다.<br>아래와 같이 input과 output 중간에서 AnalyserNode를 이용하여 data를 가로챌 수 있게 됩니다.</p>
-<p><img src="/images/audio/analyserNode.png#left" alt="audioAnalyser"><br>이미지 출처 : [<a href="https://developer.mozilla.org/ko/docs/Web/API/AnalyserNode]" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/API/AnalyserNode]</a></p>
+<p><img src="/images/audio/audio_img01.png#left" alt="audioAnalyser"><br>이미지 출처 : [<a href="https://developer.mozilla.org/ko/docs/Web/API/AnalyserNode]" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/API/AnalyserNode]</a></p>
 <p>AuidoContext의 createAnalyser 메소드를 사용하여, 주파수를 시각화 할 수 있는 AnalyserNode를 만들어줍니다.<br>AnalyserNode를 만들고 requestAnimationFrame을 사용하여 주파수 데이터를 반복적으로 수집할 수 있습니다.</p>
 <p>우선 오디오를 시각화 하기 위해서 필요한 AnalyserNode와 GainNode에 대해 알아보겠습니다.</p>
 <h2 id="AnalyserNode"><a href="#AnalyserNode" class="headerlink" title="AnalyserNode"></a>AnalyserNode</h2><ul>
